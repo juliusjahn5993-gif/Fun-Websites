@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jahn &amp; Kollegen — Bewerbungsverfahren 33/2026</title>
+<meta name="description" content="Eignungsverfahren für die Position Gast (m/w/d). Bewerbungsverfahren 33/2026.">
+<meta name="theme-color" content="#EFEDE8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+<script>
+/* ==========================================================================
+   K O N F I G U R A T I O N
+   --------------------------------------------------------------------------
+   Hier die beiden Werte aus dem Supabase-Projekt eintragen (siehe SETUP.md).
+   Bleiben sie leer, läuft die Seite vollständig über localStorage weiter.
+   ========================================================================== */
+var CONFIG = {
+  SUPABASE_URL:      "",   // z. B. "https://abcdefghijklm.supabase.co"
+  SUPABASE_ANON_KEY: ""    // der lange "anon public"-Schlüssel
+};
+</script>
+
+<style>
+/* ============================ Grundlagen ================================= */
+:root{
+  --papier:#EFEDE8;
+  --tinte:#1B2430;
+  --bordeaux:#6E1F2A;
+  --bronze:#A08A5B;
+  --grau:#7A7A72;
+  --display:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  --fliess:"Source Serif 4","Iowan Old Style",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+html{background:var(--papier);-webkit-text-size-adjust:100%}
+body{
+  background:var(--papier);
+  color:var(--tinte);
+  font-family:var(--fliess);
+  font-size:16px;
+  line-height:1.55;
+  min-height:100vh;
+  min-height:100dvh;
+  overflow-x:hidden;
+  position:relative;
+}
+/* Papierstruktur, sehr fein */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.16;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+img,svg{max-width:100%}
+::selection{background:rgba(110,31,42,.16)}
+
+/* ============================ Seitenrahmen =============================== */
+.seite{
+  position:relative;z-index:1;
+  max-width:460px;margin:0 auto;
+  padding:18px 14px calc(28px + env(safe-area-inset-bottom));
+  padding-top:calc(18px + env(safe-area-inset-top));
+}
+.rahmen{border:1px solid var(--bronze);padding:4px}
+.rahmen-innen{border:1px solid var(--bronze);padding:20px 18px 18px}
+
+/* ============================ Briefkopf ================================== */
+.kopf{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;color:var(--grau);
+  text-transform:uppercase;border-bottom:1px solid var(--bronze);padding-bottom:8px}
+.kopf b{display:block;font-weight:500;color:var(--tinte);letter-spacing:.09em}
+.kopf-rechts{text-align:right;white-space:nowrap}
+.uhr{display:block;margin-top:2px;font-family:var(--mono);font-size:15px;color:var(--tinte);
+  letter-spacing:.06em;font-weight:500}
+.uhr.negativ{color:var(--bordeaux)}
+.dp{animation:blink 1.06s steps(1,end) infinite}
+.uhr.steht .dp{animation:none}
+@keyframes blink{50%{opacity:0}}
+
+.marke{font-family:var(--display);font-variant:small-caps;letter-spacing:.22em;
+  font-size:15px;text-align:center;margin:14px 0 2px}
+.marke-unter{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--grau);
+  text-align:center;text-transform:uppercase;margin-bottom:14px}
+
+/* ============================ Fortschritt ================================ */
+.fortschritt{height:3px;background:rgba(160,138,91,.25);margin:0 0 4px}
+.fortschritt i{display:block;height:100%;background:var(--bronze);width:0;
+  transition:width .45s ease}
+.fortschritt-text{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;
+  color:var(--grau);text-transform:uppercase;margin-bottom:18px;display:flex;
+  justify-content:space-between;gap:8px}
+
+/* ============================ Typografie ================================= */
+h1{font-family:var(--display);font-weight:500;font-size:30px;line-height:1.18;
+  letter-spacing:.03em;margin:0 0 10px}
+h2{font-family:var(--display);font-weight:500;font-size:24px;line-height:1.2;
+  letter-spacing:.04em;margin:0 0 4px}
+.modulnr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--bordeaux);
+  text-transform:uppercase;margin:0 0 6px}
+.betreff{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;color:var(--grau);
+  text-transform:uppercase;margin:0 0 12px}
+p{margin:0 0 12px}
+.frage{font-family:var(--display);font-size:20px;line-height:1.3;letter-spacing:.02em;
+  margin:2px 0 16px}
+.klein{font-family:var(--mono);font-size:11px;line-height:1.65;color:var(--grau);
+  letter-spacing:.02em}
+.zier{border:0;border-top:1px solid var(--bronze);margin:18px 0}
+.zier-doppel{border:0;border-top:1px solid var(--bronze);border-bottom:1px solid var(--bronze);
+  height:3px;margin:20px 0}
+.kapital{font-family:var(--display);font-variant:small-caps;letter-spacing:.18em}
+
+/* ============================ Datenblock ================================= */
+.datenblock{border-top:1px solid var(--bronze);border-bottom:1px solid var(--bronze);
+  margin:16px 0;font-family:var(--mono);font-size:11px;line-height:1.5}
+.datenzeile{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid rgba(160,138,91,.4)}
+.datenzeile:last-child{border-bottom:0}
+.datenzeile dt{flex:0 0 40%;color:var(--grau);text-transform:uppercase;letter-spacing:.09em;margin:0}
+.datenzeile dd{flex:1;margin:0;color:var(--tinte)}
+
+/* ============================ Bedienelemente ============================= */
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.knopf{display:block;width:100%;min-height:48px;padding:13px 16px;
+  border:1px solid var(--tinte);background:transparent;color:var(--tinte);
+  font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  text-align:center;margin-top:12px;transition:background .12s linear,color .12s linear}
+.knopf:active{background:var(--tinte);color:var(--papier)}
+.knopf.primaer{border-color:var(--bordeaux);color:var(--bordeaux)}
+.knopf.primaer:active{background:var(--bordeaux);color:var(--papier)}
+.knopf.gesperrt{border-color:rgba(122,122,114,.5);color:rgba(122,122,114,.75)}
+.knopf.gesperrt:active{background:transparent;color:rgba(122,122,114,.75)}
+.knopf.schmal{margin-top:8px}
+
+.wahl{display:block;width:100%;min-height:48px;text-align:left;padding:12px 14px;
+  border:1px solid var(--bronze);margin-top:10px;background:transparent;
+  font-family:var(--fliess);font-size:16px;line-height:1.35;
+  display:flex;align-items:center;gap:12px}
+.wahl .kuerzel{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--grau);
+  border:1px solid var(--bronze);width:22px;height:22px;flex:0 0 22px;
+  display:flex;align-items:center;justify-content:center}
+.wahl:active{background:rgba(160,138,91,.14)}
+.wahl.gewaehlt{border-color:var(--bordeaux)}
+.wahl.gewaehlt .kuerzel{border-color:var(--bordeaux);color:var(--bordeaux)}
+.wahl:disabled{opacity:.45}
+
+input[type=text],input[type=number]{
+  width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--bronze);
+  background:transparent;color:var(--tinte);font-family:var(--mono);font-size:16px;
+  letter-spacing:.06em;border-radius:0;-webkit-appearance:none;appearance:none}
+input[type=text]:focus,input[type=number]:focus{outline:2px solid var(--bordeaux);outline-offset:1px}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+label.feldname{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--grau);margin:16px 0 6px}
+
+/* ============================ Meldungen ================================== */
+.meldung{border-left:2px solid var(--bronze);padding:10px 0 10px 12px;margin:16px 0 4px;
+  font-family:var(--mono);font-size:11.5px;line-height:1.6}
+.meldung.fehler{border-left-color:var(--bordeaux);color:var(--bordeaux)}
+.meldung.erfolg{border-left-color:var(--tinte)}
+.meldung.hinweis{color:var(--grau)}
+
+/* ============================ Stempel ==================================== */
+.stempel-ablage{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:22px 0 0}
+.stempel-ablage:empty{margin:0}
+.stempel{
+  border:2px solid var(--bordeaux);color:var(--bordeaux);
+  font-family:var(--mono);font-size:7px;letter-spacing:.03em;text-transform:uppercase;
+  padding:5px 5px;line-height:1.45;opacity:.9;max-width:100%;
+  transform-origin:50% 50%;
+}
+.stempel b{display:block;font-weight:500;font-size:8px;letter-spacing:.07em}
+.stempel.knall{animation:knall .12s cubic-bezier(.2,.9,.3,1) 1}
+@keyframes knall{from{transform:scale(1.6) rotate(var(--rot,0deg));opacity:.2}
+  to{transform:scale(1) rotate(var(--rot,0deg));opacity:.9}}
+
+/* ============================ Beobachterprotokoll ======================== */
+.protokoll{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--papier);border-top:1px solid var(--bronze);
+  font-family:var(--mono);font-size:10.5px;line-height:1.45;letter-spacing:.03em;
+  color:var(--tinte);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  transform:translateY(102%);transition:transform .32s ease;pointer-events:none}
+.protokoll.an{transform:translateY(0)}
+.protokoll span{display:block;color:var(--grau);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;margin-bottom:3px}
+
+/* ============================ Modal ====================================== */
+.modal-grund{position:fixed;inset:0;z-index:80;background:rgba(27,36,48,.42);
+  display:flex;align-items:flex-end;justify-content:center;padding:0}
+.modal{background:var(--papier);border-top:1px solid var(--bronze);width:100%;
+  max-width:460px;padding:22px 20px calc(20px + env(safe-area-inset-bottom));
+  transform:translateY(100%);animation:hoch .3s ease forwards}
+@keyframes hoch{to{transform:translateY(0)}}
+.modal .absender{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--bordeaux);margin-bottom:8px}
+
+/* ============================ Kekse (Modul 0) ============================ */
+.kekse{position:fixed;inset:0;z-index:100;background:var(--papier);overflow-y:auto;
+  -webkit-overflow-scrolling:touch}
+.kekse-inner{max-width:460px;width:100%;margin:0 auto;min-height:100vh;min-height:100dvh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:26px 20px calc(26px + env(safe-area-inset-bottom))}
+.schalterzeile{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 0;border-bottom:1px solid rgba(160,138,91,.5);min-height:48px}
+.schalterzeile p{margin:0;font-size:15px}
+.schalterzeile small{display:block;font-family:var(--mono);font-size:9.5px;color:var(--grau);
+  letter-spacing:.08em;text-transform:uppercase}
+.schalter{flex:0 0 auto;width:46px;height:26px;border:1px solid var(--bronze);position:relative;
+  background:transparent;padding:0}
+.schalter i{position:absolute;top:2px;left:22px;width:20px;height:20px;background:var(--bordeaux);
+  transition:left .16s ease}
+.schalter[data-an="0"] i{left:2px;background:var(--grau)}
+
+/* ============================ Captcha ==================================== */
+.captcha{border:1px solid var(--tinte);margin:14px 0 4px}
+.captcha-kopf{background:var(--tinte);color:var(--papier);padding:11px 12px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;line-height:1.45}
+.captcha-kopf b{display:block;font-family:var(--display);font-size:17px;font-weight:500;
+  letter-spacing:.06em;margin-bottom:2px}
+.raster{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--tinte);
+  padding:2px}
+.kachel{position:relative;aspect-ratio:1/1;background:var(--papier);border:0;padding:0;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:44px}
+.kachel::after{content:"";position:absolute;inset:0;border:1px solid rgba(160,138,91,.5)}
+.kachel .haken{position:absolute;top:3px;left:3px;width:15px;height:15px;
+  border:1px solid var(--bordeaux);background:var(--papier);opacity:0;z-index:2}
+.kachel .haken::before{content:"";position:absolute;left:4px;top:1px;width:5px;height:9px;
+  border:solid var(--bordeaux);border-width:0 1.5px 1.5px 0;transform:rotate(42deg)}
+.kachel[aria-pressed="true"] .haken{opacity:1}
+.kachel[aria-pressed="true"]{outline:2px solid var(--bordeaux);outline-offset:-2px}
+.captcha-fuss{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:9px 10px;border-top:1px solid var(--tinte);font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.1em;color:var(--grau);text-transform:uppercase}
+.attrappe{border:1px solid var(--bronze);width:30px;height:30px;display:flex;
+  align-items:center;justify-content:center;color:var(--bronze);font-size:14px;line-height:1;
+  font-family:var(--mono)}
+/* Dose, rein aus CSS gezeichnet */
+.dose{width:38%;height:64%;position:relative;background:var(--tinte);
+  border:1px solid #0f1620}
+.dose::before{content:"";position:absolute;left:-1px;right:-1px;top:26%;height:34%;
+  background:var(--bordeaux)}
+.dose::after{content:"";position:absolute;left:14%;right:14%;top:36%;height:14%;
+  background:var(--papier)}
+.dose .deckel{position:absolute;left:12%;right:12%;top:-5px;height:5px;background:var(--bronze)}
+.dose .null{position:absolute;left:0;right:0;top:52%;text-align:center;color:var(--papier);
+  font-family:var(--mono);font-size:8px;letter-spacing:.14em}
+
+/* ============================ Fliehendes Feld ============================ */
+.fluchtfeld{position:relative;min-height:296px;margin-top:6px}
+.fluchtfeld .wahl{margin-top:10px}
+.wahl.fliegt{position:absolute;width:64%;min-width:170px;margin:0;
+  transition:left .2s ease,top .2s ease;z-index:3;background:var(--papier)}
+
+/* ============================ Vereinbarung =============================== */
+.vertragstext{border-top:1px solid var(--bronze);border-bottom:1px solid var(--bronze);
+  padding:12px 0;margin:14px 0;font-family:var(--mono);font-size:11px;line-height:1.75;
+  color:var(--grau)}
+.klausel{display:flex;gap:8px;margin-bottom:9px}
+.klausel .nr{flex:0 0 34px;color:var(--bronze)}
+.klausel.pflicht{color:var(--tinte)}
+.pflichtfeld{display:flex;gap:10px;align-items:flex-start;min-height:44px;
+  padding:6px 0;cursor:pointer}
+.kaestchen{flex:0 0 20px;width:20px;height:20px;border:1px solid var(--bordeaux);
+  position:relative;margin-top:1px;background:var(--papier)}
+.pflichtfeld[data-an="1"] .kaestchen::before{content:"";position:absolute;left:6px;top:2px;
+  width:6px;height:11px;border:solid var(--bordeaux);border-width:0 1.5px 1.5px 0;
+  transform:rotate(42deg)}
+
+/* ============================ Postkorb =================================== */
+.postkorb{border-top:1px solid var(--bronze);margin:14px 0}
+.postzeile{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--bronze);
+  padding:8px 0;transition:transform .2s ease}
+.postzeile .rang{font-family:var(--mono);font-size:10px;color:var(--bordeaux);
+  letter-spacing:.1em;flex:0 0 22px}
+.postzeile .text{flex:1;font-size:15px;line-height:1.3}
+.postzeile .pfeile{display:flex;gap:4px;flex:0 0 auto}
+.pfeil{width:44px;height:44px;border:1px solid var(--bronze);font-family:var(--mono);
+  font-size:12px;color:var(--tinte);display:flex;align-items:center;justify-content:center}
+.pfeil:disabled{color:rgba(122,122,114,.4);border-color:rgba(160,138,91,.4)}
+.pfeil:active{background:rgba(160,138,91,.16)}
+
+/* ============================ Schicht ==================================== */
+.schichtfeld{display:block;width:100%;text-align:left;border:1px solid var(--bronze);
+  padding:16px 14px;margin-top:12px;min-height:88px;background:transparent}
+.schichtfeld .titel{font-family:var(--display);font-size:22px;letter-spacing:.06em;
+  font-variant:small-caps;display:block;margin-bottom:4px}
+.schichtfeld .unter{font-family:var(--mono);font-size:10.5px;color:var(--grau);
+  line-height:1.5;letter-spacing:.03em;display:block}
+.schichtfeld.gewaehlt{border-color:var(--bordeaux);border-width:1px;outline:1px solid var(--bordeaux);
+  outline-offset:2px}
+.schichtfeld.gewaehlt .titel{color:var(--bordeaux)}
+
+/* ============================ Ladebalken ================================= */
+.lade{height:2px;background:rgba(160,138,91,.3);margin:18px 0 10px}
+.lade i{display:block;height:100%;background:var(--bordeaux);width:0;transition:width .4s linear}
+.ladezeile{font-family:var(--mono);font-size:11px;color:var(--grau);letter-spacing:.04em;
+  min-height:1.6em}
+
+/* ============================ Vertrag ==================================== */
+.urkunde{border:1px solid var(--bronze);padding:4px;margin-top:6px}
+.urkunde-innen{border:1px solid var(--bronze);padding:22px 16px}
+.urkunde h2{text-align:center;font-size:27px;letter-spacing:.06em;font-variant:small-caps;
+  margin-bottom:2px}
+.urkunde .unterzeile{text-align:center;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.16em;color:var(--grau);text-transform:uppercase;margin-bottom:16px}
+.code-block{margin:22px 0 6px;text-align:center}
+.code-block .oben{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--grau);
+  text-transform:uppercase;margin-bottom:10px}
+.code-block .code{font-family:var(--display);font-size:38px;line-height:1.1;letter-spacing:.14em;
+  border-top:1px solid var(--bronze);border-bottom:1px solid var(--bronze);
+  padding:14px 0;margin:0;color:var(--tinte)}
+.code-block .fuss{font-family:var(--mono);font-size:9.5px;color:var(--grau);margin-top:8px;
+  letter-spacing:.06em;line-height:1.5}
+.unterschriften{display:flex;flex-direction:column;gap:20px;margin-top:28px}
+.unterschrift{border-top:1px solid var(--tinte);padding-top:6px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--grau);
+  text-transform:uppercase}
+.unterschrift .gez{font-family:var(--display);font-style:italic;font-size:19px;color:var(--tinte);
+  letter-spacing:.02em;text-transform:none;margin-bottom:2px;line-height:1}
+.unterschrift .leer{height:21px}
+
+/* ============================ Rangliste ================================== */
+.live{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--grau);margin-bottom:6px}
+.punkt{width:7px;height:7px;background:var(--bordeaux);flex:0 0 7px;
+  animation:puls 2.4s ease-in-out infinite}
+.punkt.aus{background:var(--grau);animation:none}
+@keyframes puls{0%,100%{opacity:1}50%{opacity:.25}}
+.aktualisierung{font-family:var(--mono);font-size:9.5px;color:var(--grau);letter-spacing:.06em;
+  margin-bottom:10px;min-height:1.4em}
+.tabelle{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11.5px;
+  border-top:1px solid var(--bronze);border-bottom:1px solid var(--bronze)}
+.tabelle th{font-weight:500;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--grau);text-align:left;padding:7px 4px;border-bottom:1px solid var(--bronze)}
+.tabelle td{padding:8px 4px;border-bottom:1px solid rgba(160,138,91,.4);vertical-align:top}
+.tabelle tr:last-child td{border-bottom:0}
+.tabelle .r-rang{width:26px;color:var(--grau)}
+.tabelle .r-name{font-family:var(--fliess);font-size:14px;line-height:1.25;word-break:break-word}
+.tabelle .r-zeit{text-align:right;width:52px;white-space:nowrap}
+.tabelle .r-bean{text-align:right;width:34px;color:var(--grau)}
+.tabelle tr.selbst .r-name::after{content:"";display:inline-block;width:6px;height:6px;
+  background:var(--bordeaux);margin-left:7px;vertical-align:middle}
+.tabelle tr{transition:transform .2s ease}
+.tabelle tr.neu td{animation:aufblitz 1.1s ease-out 1}
+@keyframes aufblitz{0%{background:rgba(110,31,42,.28)}100%{background:transparent}}
+
+.balkenblock{margin-top:22px}
+.balkenzeile{margin-bottom:12px}
+.balkenkopf{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.06em;margin-bottom:4px}
+.balkenkopf .wert{color:var(--grau)}
+.balken{height:9px;border:1px solid var(--bronze)}
+.balken i{display:block;height:100%;background:var(--bronze);width:0;transition:width .4s ease}
+
+/* ============================ Fuß ======================================== */
+.fussnoten{margin-top:26px;border-top:1px solid var(--bronze);padding-top:10px;
+  font-family:var(--mono);font-size:9px;line-height:1.7;color:var(--grau);letter-spacing:.02em}
+.fussnoten p{margin:0 0 3px}
+.betriebsstatus{margin-top:8px;color:var(--grau)}
+
+/* ============================ Aushang ==================================== */
+.aushang{position:relative;z-index:1;min-height:100vh;min-height:100dvh;display:flex;
+  flex-direction:column;padding:3vh 4vw calc(2vh + env(safe-area-inset-bottom))}
+.aushang-kopf{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;
+  border-bottom:1px solid var(--bronze);padding-bottom:1.4vh}
+.aushang-kopf h1{font-size:clamp(22px,3.6vw,52px);margin:0;letter-spacing:.06em;
+  font-variant:small-caps}
+.aushang-kopf .meta{font-family:var(--mono);font-size:clamp(9px,1vw,14px);color:var(--grau);
+  letter-spacing:.14em;text-transform:uppercase;text-align:right;white-space:nowrap}
+.aushang-titel{font-family:var(--display);font-size:clamp(20px,3vw,44px);letter-spacing:.1em;
+  font-variant:small-caps;margin:1.6vh 0 .6vh}
+.aushang-tab{width:100%;border-collapse:collapse;font-family:var(--display);
+  font-size:clamp(18px,2.7vw,40px);letter-spacing:.03em}
+.aushang-tab th{font-family:var(--mono);font-size:clamp(8px,.85vw,12px);letter-spacing:.16em;
+  text-transform:uppercase;color:var(--grau);font-weight:500;text-align:left;
+  padding:.5vh .6vw;border-bottom:1px solid var(--bronze)}
+.aushang-tab td{padding:.7vh .6vw;border-bottom:1px solid rgba(160,138,91,.45)}
+.aushang-tab .z{text-align:right;font-family:var(--mono);font-size:clamp(13px,1.7vw,24px)}
+.aushang-tab .r{color:var(--bordeaux);width:2.5em;font-family:var(--mono);
+  font-size:clamp(13px,1.7vw,24px)}
+.aushang-fuss{margin-top:auto;border-top:1px solid var(--bronze);padding-top:1.4vh;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:20px;
+  font-family:var(--mono);font-size:clamp(9px,1.05vw,15px);letter-spacing:.1em;color:var(--grau);
+  text-transform:uppercase}
+.aushang-fuss .stand{color:var(--tinte);display:flex;gap:2.5vw;flex-wrap:wrap}
+.aushang-fuss .ort{white-space:nowrap;text-align:right}
+.aushang-leer{font-family:var(--mono);font-size:clamp(11px,1.3vw,18px);color:var(--grau);
+  letter-spacing:.1em;padding:3vh 0}
+
+/* ============================ Bewegung aus ============================== */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .dp{animation:none !important;opacity:1 !important}
+  .punkt{animation:none !important}
+}
+</style>
+</head>
+<body>
+<div id="wurzel"></div>
+<div class="protokoll" id="protokoll" aria-hidden="true"></div>
+<div id="modalraum"></div>
+
+<script>
+"use strict";
+/* ==========================================================================
+   1 — MODULE. Alle Fragen, Texte und die Reihenfolge stehen hier.
+   ========================================================================== */
+const MODULE = [
+  {
+    nr:1, art:"choice", titel:"Unternehmenskenntnis",
+    frage:"An welchem Standort ist die Geschäftsführung ansässig?",
+    hinweis:"Einfachauswahl. Mehrfachnennungen werden nicht gewertet.",
+    optionen:["Leipzig","Dresden","Halle (Saale)","Wird nicht mitgeteilt"],
+    richtig:0,
+    fehler:"Angabe unzutreffend. Bitte korrigieren Sie Ihre Eingabe.",
+    erfolg:"Angabe zutreffend. Übernahme in die Bewerberakte erfolgt.",
+    nachlauf:"zeitbeobachtung"
+  },
+  {
+    nr:2, art:"schieber", titel:"Betriebszugehörigkeit",
+    frage:"Welches Lebensjahr vollendet die Geschäftsführung im laufenden Geschäftsjahr?",
+    hinweis:"Regler bewegen, anschließend Angabe übernehmen.",
+    min:18, max:60, start:18, richtig:33,
+    korrekturwert:27,
+    korrektur:"Angabe wurde von der Personalabteilung zu Ihren Gunsten korrigiert.",
+    fehler:"Angabe unzutreffend. Die Personalabteilung bittet um erneute Schätzung.",
+    erfolg:"Angabe zutreffend. Das Lebensjahr wird aktenkundig geführt.",
+    protokollNachher:true
+  },
+  {
+    nr:3, art:"captcha", titel:"Sicherheitsabfrage",
+    frage:"Bitte bestätigen Sie, dass Sie kein automatisiertes System sind.",
+    aufgabe:"Markieren Sie sämtliche Felder, die Cola Zero zeigen.",
+    hinweis:"Der geschützte Teil des Bewerberportals ist erst nach erfolgreicher Prüfung erreichbar.",
+    fehler:"Prüfung fehlgeschlagen. Bitte gründlicher.",
+    erfolg:"Sie wurden als Mensch eingestuft. Das Ergebnis wird der Personalakte beigefügt."
+  },
+  {
+    nr:4, art:"flucht", titel:"Dienstreisen",
+    frage:"Welchen der folgenden Standorte hat die Geschäftsführung zuletzt nicht allein bereist?",
+    hinweis:"Es ist genau eine Angabe vorgesehen.",
+    optionen:["Mailand","Marseille","Barcelona","Mallorca","Meppen Süd"],
+    richtig:4,
+    fehler:"Angabe unzutreffend. Der Standort wurde allein bereist.",
+    erfolg:"Angabe erfasst. Ihre Beharrlichkeit wurde im Protokoll vermerkt.",
+    nachlauf:"gutschrift"
+  },
+  {
+    nr:5, art:"choice", titel:"Betriebliche Verpflegung",
+    frage:"Welches Getränk führt die Geschäftsführung im Dienst?",
+    hinweis:"Angabe dient der Beschaffungsplanung (§ 12 Abs. 4 BetrO).",
+    optionen:["Cola Zero","Cola mit Zucker","Leitungswasser","Keine Angabe"],
+    richtig:0,
+    fehler:"Angabe unzutreffend. Die Beschaffung wäre so nicht durchführbar.",
+    erfolg:"Angabe zutreffend. Der Bedarf wird entsprechend angemeldet.",
+    nachlauf:"zwischenauswertung",
+    protokollNachher:true
+  },
+  {
+    nr:6, art:"zahl", titel:"Gehaltsvorstellung",
+    frage:"Die Geschäftsführung hat ihre persönliche Gehaltsvorstellung beziffert. Schätzen Sie den Betrag in Euro.",
+    hinweis:"Angabe ohne Punkte und ohne Währungszeichen.",
+    feldname:"Betrag in Euro",
+    schwelle:10000000,
+    fehler:"Betrag unrealistisch niedrig. Bitte großzügiger schätzen.",
+    fehler3:"Ihre Bescheidenheit ist rührend, aber unzutreffend.",
+    erfolg:"Betrag oberhalb der Erwartung. Wird wohlwollend zur Kenntnis genommen.",
+    leer:"Es wurde kein Betrag erfasst. Bitte tragen Sie eine Zahl ein."
+  },
+  {
+    nr:7, art:"text", titel:"Funktionsbezeichnung",
+    frage:"Nennen Sie in einem Wort den ausgeübten Beruf der Geschäftsführung.",
+    hinweis:"Ein Wort. Abkürzungen sind unzulässig.",
+    feldname:"Funktionsbezeichnung",
+    loesung:"lehrer",
+    formfehler:"Angabe inhaltlich zutreffend, formal unzulässig. Die Personalabteilung erfasst Funktionsbezeichnungen ausschließlich in Großbuchstaben.",
+    fehler:"Angabe nicht verwertbar. Die Tätigkeit wird an Schulen ausgeübt.",
+    erfolg:"Angabe formgerecht erfasst. Vorgang abgeschlossen.",
+    nachlauf:"abzug"
+  },
+  {
+    nr:8, art:"vereinbarung", titel:"Zusatzvereinbarung",
+    frage:"Zusatzvereinbarung zum Gastverhältnis",
+    hinweis:"Bitte vollständig zur Kenntnis nehmen.",
+    klauseln:[
+      "Der Gast erscheint zur vereinbarten Schicht und meldet sich bei der Geschäftsführung an.",
+      "Ab 23:00 Uhr besteht Tanzpflicht. Ausnahmen bedürfen der Schriftform.",
+      "Der Gast verzichtet auf das Erzählen eigener Reiseanekdoten während der ersten Betriebsstunde.",
+      "PFLICHTFELD",
+      "Der Gast stimmt der Anfertigung von Lichtbildern in mäßiger Qualität zu.",
+      "Sämtliche Betriebsmittel (Gläser, Sitzgelegenheiten, gute Laune) sind bei Verfahrensende zurückzugeben."
+    ],
+    pflicht:"Ich verpflichte mich zum Konsum von mindestens drei Getränken im Laufe des Abends.",
+    fehler:"Bitte lesen Sie die Vereinbarung vollständig.",
+    erfolg:"Zusatzvereinbarung erfasst. Eine Ausfertigung verbleibt bei der Personalabteilung.",
+    protokollNachher:true
+  },
+  {
+    nr:9, art:"quittung", titel:"Aufwandsentschädigung",
+    frage:"Für Ihre Tätigkeit ist eine Aufwandsentschädigung vorgesehen: 0,00 €.",
+    hinweis:"Bitte bestätigen Sie den Empfang.",
+    ablehnung:"Eine Ablehnung ist verfahrenstechnisch nicht vorgesehen. Die Entschädigung bleibt bestehen.",
+    schritte:["Stelle Zahlungsvorgang in Warteschlange","Prüfe Kontoverbindung der Personalabteilung","Verifiziere Auszahlungsberechtigung …"],
+    erfolg:"Empfang bestätigt. Der Betrag gilt als vollständig ausgekehrt."
+  },
+  {
+    nr:10, art:"postkorb", titel:"Postkorbübung",
+    frage:"Ordnen Sie die Anliegen der Geschäftsführung nach betrieblicher Dringlichkeit.",
+    hinweis:"Jede Reihenfolge ist zulässig. Die Bewertung erfolgt gremiumsintern.",
+    eintraege:[
+      {id:"frieden", text:"Weltfrieden"},
+      {id:"hunger",  text:"Ende des Welthungers"},
+      {id:"geld",    text:"10 Millionen Euro zur freien Verfügung"}
+    ],
+    kommentare:{
+      geld:"Ihre Priorisierung deckt sich auffällig mit der Aktenlage.",
+      frieden:"Ihre Priorisierung wurde als gemeinnützig vermerkt. Die Geschäftsführung nimmt dies zur Kenntnis.",
+      hunger:"Ihre Priorisierung wurde als versorgungsorientiert eingestuft. Vermerk erfolgt."
+    },
+    protokollNachher:true
+  },
+  {
+    nr:11, art:"schicht", titel:"Schichtpräferenz",
+    frage:"Die Arbeitszeit befindet sich noch in Abstimmung. Sie werden hierzu angehört.",
+    hinweis:"Ihre Angabe wird der Dienstplanung zugeleitet.",
+    optionen:[
+      {id:"frueh", titel:"Frühschicht", unter:"Dayrave. Tagveranstaltung mit erhöhtem Tageslichtanteil."},
+      {id:"spaet", titel:"Spätschicht", unter:"Abendveranstaltung nach hergebrachter Sitte."}
+    ],
+    protokolltext:"Ihre Präferenz wurde zu Protokoll genommen. Ein Anspruch auf Berücksichtigung bei der Dienstplanung entsteht hieraus nicht (§ 7 Abs. 3 BetrO).",
+    feldname:"Begründung (wird nicht gelesen)",
+    erfolg:"Anhörung abgeschlossen. Die Auswertung erfolgt fortlaufend."
+  }
+];
+
+/* Beobachterprotokoll — genau vier Einblendungen. */
+const PROTOKOLL = [
+  "Beobachter 2 notiert: wirkt belastbar, aber langsam.",
+  "Beobachter 1 notiert: Blickkontakt zum Gerät durchgehend gehalten. Positiv.",
+  "Beobachter 3 notiert: keine Auffälligkeiten. Beobachter 2 widerspricht.",
+  "Das Gremium hat sich vertagt."
+];
+
+/* Fußnoten, fortlaufend eingestreut. */
+const FUSSNOTEN = [
+  "Diese Seite ist kein Vertragsangebot im Sinne des § 145 BGB, verhält sich aber so.",
+  "Bewerbungsverfahren 33/2026. Frühere Verfahren wurden aus Platzgründen eingestellt.",
+  "Die Bearbeitungszeit wird ausschließlich zu Vergleichszwecken erhoben.",
+  "Beobachter 2 befindet sich seit Verfahrensbeginn in der Mittagspause.",
+  "Die Betriebsordnung (BetrO) liegt in der Personalabteilung zur Einsicht nicht aus.",
+  "Angaben ohne Gewähr. Angaben mit Gewähr sind gesondert zu beantragen.",
+  "Rechtsbehelfe gegen Modul-Ergebnisse sind binnen 14 Tagen mündlich einzulegen.",
+  "Der Fortschrittsbalken ist eine Schätzung der Testleitung und nicht rechtsverbindlich.",
+  "Ein Anspruch auf Sitzplatz besteht nur bei tatsächlichem Erscheinen.",
+  "Die Personalabteilung dankt für Ihr Verständnis, unabhängig davon, ob es besteht.",
+  "Bei Rückfragen wenden Sie sich bitte an Beobachter 3. Beobachter 3 ist nicht erreichbar.",
+  "Änderungen der Schichtplanung bleiben bis unmittelbar vor Veranstaltungsbeginn vorbehalten.",
+  "Zuwiderhandlungen werden freundlich, aber aktenkundig behandelt.",
+  "Dieses Verfahren ersetzt keine persönliche Einladung. Es ist die persönliche Einladung."
+];
+
+/* ==========================================================================
+   2 — ZUSTAND
+   ========================================================================== */
+const S = {
+  screen:"kekse",
+  modulIndex:0,
+  antworten:{},
+  beanstandungen:0,
+  stempel:[],           // {zeile1, zeile2, rot}
+  restzeit:300,
+  timerLaeuft:false,
+  timerSichtbar:false,
+  ueberschritten:false,
+  protokollIndex:0,
+  fussnotenStand:2,
+  name:"",
+  fortschrittOverride:null,
+  personalnummer:"",
+  eigeneZeit:0,
+  eigeneId:null,
+  schicht:null
+};
+
+const LS = {
+  eigeneId:"jk33.eigeneId",
+  eigenerName:"jk33.eigenerName",
+  gewaehlt:"jk33.abgestimmt",
+  scores:"jk33.leaderboard",
+  votes:"jk33.votes"
+};
+
+/* ==========================================================================
+   3 — HILFSFUNKTIONEN
+   ========================================================================== */
+const $  = (sel,wo)=> (wo||document).querySelector(sel);
+const $$ = (sel,wo)=> Array.prototype.slice.call((wo||document).querySelectorAll(sel));
+
+function el(tag,cls,txt){
+  const n=document.createElement(tag);
+  if(cls) n.className=cls;
+  if(txt!=null) n.textContent=txt;
+  return n;
+}
+function leise(){ return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+function zufall(a,b){ return a + Math.random()*(b-a); }
+function zeitText(sek){
+  const neg = sek<0;
+  const s = Math.abs(Math.round(sek));
+  return (neg?"−":"") + Math.floor(s/60) + ":" + String(s%60).padStart(2,"0");
+}
+function uhrzeit(d){
+  d = d||new Date();
+  return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0")+":"+String(d.getSeconds()).padStart(2,"0");
+}
+const MONATE=["JAN","FEB","MRZ","APR","MAI","JUN","JUL","AUG","SEP","OKT","NOV","DEZ"];
+function datumKurz(){
+  const d=new Date();
+  return d.getDate()+". "+MONATE[d.getMonth()];
+}
+
+/* ==========================================================================
+   4 — SPEICHERSCHICHT (Supabase mit Realtime, sonst localStorage)
+   ========================================================================== */
+const Store = (function(){
+  let modus = "lokal";               // "supabase" | "lokal"
+  let verbindung = "lokal";          // "realtime" | "abfrage" | "lokal"
+  let daten = {scores:[], votes:[]};
+  const hoerer = [];
+  let ws=null, wsRef=0, hb=null, poll=null, reconnect=null, wsOffen=false, gestartet=false;
+
+  const url = ()=> (CONFIG.SUPABASE_URL||"").replace(/\/+$/,"");
+  const key = ()=> (CONFIG.SUPABASE_ANON_KEY||"").trim();
+  const kopf = ()=> ({ "apikey":key(), "Authorization":"Bearer "+key(), "Content-Type":"application/json" });
+
+  function meld(neu){ hoerer.forEach(f=>{ try{ f(daten, neu||0); }catch(e){} }); }
+
+  /* ---------- lokal ---------- */
+  function lokalLesen(schluessel){
+    try{ return JSON.parse(localStorage.getItem(schluessel)||"[]"); }catch(e){ return []; }
+  }
+  function lokalSchreiben(schluessel,arr){
+    try{ localStorage.setItem(schluessel,JSON.stringify(arr)); }catch(e){}
+  }
+  function lokalLaden(){
+    daten = {scores:lokalLesen(LS.scores), votes:lokalLesen(LS.votes)};
+  }
+
+  /* ---------- REST ---------- */
+  function hole(tabelle){
+    return fetch(url()+"/rest/v1/"+tabelle+"?select=*&order=created_at.asc&limit=500",
+      {headers:kopf()}).then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); });
+  }
+  function schreibe(tabelle,zeile){
+    return fetch(url()+"/rest/v1/"+tabelle,
+      {method:"POST", headers:Object.assign({Prefer:"return=representation"},kopf()),
+       body:JSON.stringify(zeile)}).then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); });
+  }
+
+  function alleHolen(neuMelden){
+    return Promise.all([hole("leaderboard"),hole("votes")]).then(function(res){
+      const vorher = daten.scores.length;
+      daten = {scores:res[0]||[], votes:res[1]||[]};
+      meld(neuMelden ? Math.max(0, daten.scores.length-vorher) : 0);
+    });
+  }
+
+  /* ---------- Realtime über nacktes WebSocket (Phoenix-Protokoll) ---------- */
+  function realtimeStart(){
+    if(!window.WebSocket) return abfragebetrieb();
+    let adr;
+    try{ adr = url().replace(/^http/,"ws") + "/realtime/v1/websocket?apikey="+encodeURIComponent(key())+"&vsn=1.0.0"; }
+    catch(e){ return abfragebetrieb(); }
+    try{ ws = new WebSocket(adr); }catch(e){ return abfragebetrieb(); }
+
+    const aufgabeAbbruch = setTimeout(function(){ if(!wsOffen){ try{ws.close();}catch(e){} } }, 8000);
+
+    ws.onopen = function(){
+      clearTimeout(aufgabeAbbruch);
+      wsOffen = true;
+      sende({topic:"realtime:jk33", event:"phx_join", ref:String(++wsRef), payload:{
+        config:{
+          broadcast:{ack:false,self:false},
+          presence:{key:""},
+          postgres_changes:[
+            {event:"INSERT", schema:"public", table:"leaderboard"},
+            {event:"INSERT", schema:"public", table:"votes"}
+          ]
+        },
+        access_token:key()
+      }});
+      hb = setInterval(function(){
+        sende({topic:"phoenix", event:"heartbeat", ref:String(++wsRef), payload:{}});
+      }, 25000);
+      verbindung = "realtime";
+      stoppePolling();
+      // Sicherheitsnetz: seltener Abgleich, falls ein Ereignis verloren geht.
+      poll = setInterval(function(){ alleHolen(true); }, 30000);
+      meld(0);
+    };
+    ws.onmessage = function(ev){
+      let msg; try{ msg = JSON.parse(ev.data); }catch(e){ return; }
+      if(msg.event!=="postgres_changes") return;
+      const d = msg.payload && msg.payload.data;
+      if(!d || !d.record) return;
+      const satz = d.record;
+      if(d.table==="leaderboard"){
+        if(!daten.scores.some(z=>String(z.id)===String(satz.id))){
+          daten.scores.push(satz); meld(1);
+        }
+      }else if(d.table==="votes"){
+        if(!daten.votes.some(z=>String(z.id)===String(satz.id))){
+          daten.votes.push(satz); meld(0);
+        }
+      }
+    };
+    ws.onerror = function(){ /* onclose übernimmt */ };
+    ws.onclose = function(){
+      clearTimeout(aufgabeAbbruch);
+      wsOffen=false; ws=null;
+      if(hb){ clearInterval(hb); hb=null; }
+      abfragebetrieb();
+      if(!reconnect) reconnect = setTimeout(function(){ reconnect=null; realtimeStart(); }, 12000);
+    };
+  }
+  function sende(o){ try{ ws && ws.readyState===1 && ws.send(JSON.stringify(o)); }catch(e){} }
+  function stoppePolling(){ if(poll){ clearInterval(poll); poll=null; } }
+  function abfragebetrieb(){
+    verbindung = "abfrage";
+    stoppePolling();
+    poll = setInterval(function(){ alleHolen(true); }, 5000);
+    meld(0);
+  }
+
+  /* ---------- Start ---------- */
+  function start(){
+    if(gestartet) return Promise.resolve();
+    gestartet = true;
+    lokalLaden();
+    window.addEventListener("storage", function(e){
+      if(modus==="lokal" && (e.key===LS.scores || e.key===LS.votes)){
+        const vorher = daten.scores.length;
+        lokalLaden();
+        meld(Math.max(0, daten.scores.length-vorher));
+      }
+    });
+    if(!url() || !key()){ modus="lokal"; verbindung="lokal"; return Promise.resolve(); }
+    return alleHolen(false).then(function(){
+      modus="supabase";
+      realtimeStart();
+    }).catch(function(){
+      modus="lokal"; verbindung="lokal"; lokalLaden(); meld(0);
+    });
+  }
+
+  /* ---------- Schreiben ---------- */
+  function neueId(){ return "l"+Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+
+  function addScore(eintrag){
+    if(modus==="supabase"){
+      return schreibe("leaderboard",{name:eintrag.name, seconds:eintrag.seconds, penalties:eintrag.penalties})
+        .then(function(res){
+          const satz = (res&&res[0]) || null;
+          if(satz && !daten.scores.some(z=>String(z.id)===String(satz.id))){ daten.scores.push(satz); }
+          meld(0);
+          return satz ? satz.id : null;
+        }).catch(function(){ return lokalScore(eintrag); });
+    }
+    return Promise.resolve(lokalScore(eintrag));
+  }
+  function lokalScore(eintrag){
+    const satz = {id:neueId(), name:eintrag.name, seconds:eintrag.seconds,
+                  penalties:eintrag.penalties, created_at:new Date().toISOString()};
+    const arr = lokalLesen(LS.scores); arr.push(satz); lokalSchreiben(LS.scores,arr);
+    lokalLaden(); meld(0);
+    return satz.id;
+  }
+  function addVote(stimme){
+    if(modus==="supabase"){
+      return schreibe("votes",{choice:stimme.choice, comment:stimme.comment||""})
+        .then(function(res){
+          const satz=(res&&res[0])||null;
+          if(satz && !daten.votes.some(z=>String(z.id)===String(satz.id))) daten.votes.push(satz);
+          meld(0); return true;
+        }).catch(function(){ return lokalVote(stimme); });
+    }
+    return Promise.resolve(lokalVote(stimme));
+  }
+  function lokalVote(stimme){
+    const satz={id:neueId(), choice:stimme.choice, comment:stimme.comment||"",
+                created_at:new Date().toISOString()};
+    const arr=lokalLesen(LS.votes); arr.push(satz); lokalSchreiben(LS.votes,arr);
+    lokalLaden(); meld(0);
+    return true;
+  }
+
+  return {
+    start:start,
+    on:function(f){ hoerer.push(f); },
+    addScore:addScore,
+    addVote:addVote,
+    daten:function(){ return daten; },
+    modus:function(){ return modus; },
+    verbindung:function(){ return verbindung; },
+    aktualisieren:function(){ return modus==="supabase" ? alleHolen(true) : Promise.resolve(); }
+  };
+})();
+
+/* ==========================================================================
+   5 — RANGLISTE: Auswertung
+   ========================================================================== */
+function wertung(z){ return (Number(z.seconds)||0) + (Number(z.penalties)||0)*5; }
+
+function rangliste(scores){
+  // Pro Name nur der beste Lauf.
+  const beste = {};
+  (scores||[]).forEach(function(z){
+    const schluessel = String(z.name||"").trim().toLowerCase() || String(z.id);
+    if(!beste[schluessel] || wertung(z) < wertung(beste[schluessel])) beste[schluessel]=z;
+  });
+  return Object.keys(beste).map(k=>beste[k]).sort(function(a,b){
+    const d = wertung(a)-wertung(b);
+    if(d!==0) return d;
+    return String(a.created_at||"").localeCompare(String(b.created_at||""));
+  });
+}
+function stimmenStand(votes){
+  let frueh=0, spaet=0;
+  (votes||[]).forEach(function(v){ if(v.choice==="frueh") frueh++; else if(v.choice==="spaet") spaet++; });
+  const gesamt = frueh+spaet;
+  return {frueh:frueh, spaet:spaet, gesamt:gesamt,
+    pFrueh: gesamt? Math.round(frueh/gesamt*100):0,
+    pSpaet: gesamt? Math.round(spaet/gesamt*100):0};
+}
+
+/* ==========================================================================
+   6 — TIMER
+   ========================================================================== */
+const Timer = (function(){
+  let tick=null, letzter=0;
+  function start(){
+    if(S.timerLaeuft) return;
+    S.timerLaeuft=true; S.timerSichtbar=true; letzter=Date.now();
+    tick=setInterval(function(){
+      const jetzt=Date.now();
+      S.restzeit -= (jetzt-letzter)/1000;
+      letzter=jetzt;
+      if(S.restzeit<=0 && !S.ueberschritten){
+        S.ueberschritten=true;
+        Modal.zeige({
+          absender:"Testleitung",
+          text:"Bearbeitungszeit überschritten. Das Verfahren wird abweichend von § 4 BetrO fortgesetzt.",
+          knopf:"Zur Kenntnis genommen"
+        });
+      }
+      zeichneUhr();
+    },250);
+    zeichneUhr();
+  }
+  function stopp(){ S.timerLaeuft=false; if(tick){ clearInterval(tick); tick=null; } zeichneUhr(); }
+  function korrigiere(sek){ S.restzeit += sek; zeichneUhr(); }
+  function verbraucht(){ return Math.max(0, Math.round(300 - S.restzeit)); }
+  return {start:start, stopp:stopp, korrigiere:korrigiere, verbraucht:verbraucht};
+})();
+
+function zeichneUhr(){
+  const feld = $("#uhr");
+  if(!feld) return;
+  if(!S.timerSichtbar){ feld.textContent="—:—"; return; }
+  const t = zeitText(S.restzeit);
+  const teile = t.split(":");
+  feld.className = "uhr" + (S.restzeit<0 ? " negativ":"") + (S.timerLaeuft ? "":" steht");
+  feld.innerHTML = "";
+  feld.appendChild(document.createTextNode(teile[0]));
+  const dp = el("span","dp",":"); feld.appendChild(dp);
+  feld.appendChild(document.createTextNode(teile[1]));
+}
+
+/* ==========================================================================
+   7 — MODAL, PROTOKOLL, STEMPEL
+   ========================================================================== */
+const Modal = (function(){
+  let offen=false;
+  function zeige(o){
+    if(offen) schliesse();
+    offen=true;
+    const grund = el("div","modal-grund");
+    const box = el("div","modal");
+    if(o.absender) box.appendChild(el("div","absender",o.absender));
+    const p = el("p",null,o.text); box.appendChild(p);
+    if(o.zusatz) box.appendChild(el("p","klein",o.zusatz));
+    const k = el("button","knopf primaer",o.knopf||"Zur Kenntnis genommen");
+    k.type="button";
+    k.addEventListener("click",function(){ schliesse(); if(o.danach) o.danach(); });
+    box.appendChild(k);
+    grund.appendChild(box);
+    $("#modalraum").appendChild(grund);
+    setTimeout(function(){ k.focus({preventScroll:true}); },60);
+  }
+  function schliesse(){ offen=false; $("#modalraum").innerHTML=""; }
+  return {zeige:zeige, schliesse:schliesse};
+})();
+
+function protokollZeigen(){
+  if(S.protokollIndex >= PROTOKOLL.length) return;
+  const text = PROTOKOLL[S.protokollIndex++];
+  const streifen = $("#protokoll");
+  streifen.innerHTML = "";
+  streifen.appendChild(el("span",null,"Beobachterprotokoll"));
+  streifen.appendChild(document.createTextNode(text));
+  streifen.classList.add("an");
+  setTimeout(function(){ streifen.classList.remove("an"); }, 6000);
+}
+
+function stempelHinzu(modul){
+  const beob = 1 + Math.floor(Math.random()*3);
+  S.stempel.push({
+    zeile1:"Modul "+modul.nr+" bestanden",
+    zeile2:"Beobachter "+beob+" · "+datumKurz(),
+    rot: (Math.random()*6-3).toFixed(2)
+  });
+  zeichneStempel(true);
+}
+
+function zeichneStempel(letztenKnallen){
+  const ablage = $("#stempelablage");
+  if(!ablage) return;
+  ablage.innerHTML = "";
+  S.stempel.forEach(function(st,i){
+    const n = el("div","stempel");
+    n.style.setProperty("--rot", st.rot+"deg");
+    n.style.transform = "rotate("+st.rot+"deg)";
+    n.appendChild(el("b",null,st.zeile1));
+    n.appendChild(document.createTextNode(st.zeile2));
+    if(letztenKnallen && i===S.stempel.length-1 && !leise()) n.classList.add("knall");
+    ablage.appendChild(n);
+  });
+}
+
+/* ==========================================================================
+   8 — SEITENGERÜST
+   ========================================================================== */
+function seiteGeruest(){
+  const wurzel = $("#wurzel");
+  wurzel.innerHTML = "";
+  const seite = el("div","seite");
+  const rahmen = el("div","rahmen");
+  const innen = el("div","rahmen-innen");
+
+  const kopf = el("header","kopf");
+  const links = el("div","kopf-links");
+  links.innerHTML = "<b>Verfahren 33/2026</b>Jahn &amp; Kollegen";
+  const rechts = el("div","kopf-rechts");
+  rechts.innerHTML = "Bearbeitungszeit<span class='uhr' id='uhr'>—:—</span>";
+  kopf.appendChild(links); kopf.appendChild(rechts);
+  innen.appendChild(kopf);
+
+  const fort = el("div","fortschritt"); fort.appendChild(el("i")); fort.id="fortschritt";
+  innen.appendChild(fort);
+  const fortText = el("div","fortschritt-text"); fortText.id="fortschritttext";
+  innen.appendChild(fortText);
+
+  const haupt = el("main"); haupt.id="ansicht";
+  innen.appendChild(haupt);
+
+  const ablage = el("div","stempel-ablage"); ablage.id="stempelablage";
+  innen.appendChild(ablage);
+
+  const fuss = el("footer","fussnoten"); fuss.id="fuss";
+  innen.appendChild(fuss);
+
+  rahmen.appendChild(innen); seite.appendChild(rahmen); wurzel.appendChild(seite);
+  zeichneUhr(); zeichneFuss(); zeichneFortschritt();
+}
+
+function zeichneFortschritt(){
+  const bar = $("#fortschritt"), txt = $("#fortschritttext");
+  if(!bar||!txt) return;
+  let prozent, links, rechts;
+  if(S.fortschrittOverride!=null){
+    prozent = S.fortschrittOverride;
+    links = "Verfahrensstand"; rechts = prozent+" %";
+  }else if(S.screen==="modul"){
+    prozent = Math.round((S.modulIndex/MODULE.length)*100);
+    links = "Modul "+MODULE[S.modulIndex].nr+" von "+MODULE.length;
+    rechts = prozent+" %";
+  }else if(S.screen==="vertrag"||S.screen==="rangliste"){
+    prozent = 100; links="Verfahren abgeschlossen"; rechts="100 %";
+  }else if(S.screen==="gremium"||S.screen==="name"){
+    prozent = 100; links="Verfahren in Auswertung"; rechts="100 %";
+  }else{
+    prozent = 0; links="Verfahren noch nicht eröffnet"; rechts="0 %";
+  }
+  bar.firstChild.style.width = prozent+"%";
+  txt.innerHTML = "";
+  txt.appendChild(el("span",null,links));
+  txt.appendChild(el("span",null,rechts));
+}
+
+function zeichneFuss(){
+  const fuss = $("#fuss");
+  if(!fuss) return;
+  fuss.innerHTML = "";
+  const bis = Math.min(S.fussnotenStand, FUSSNOTEN.length);
+  for(let i=0;i<bis;i++){
+    fuss.appendChild(el("p",null,hochzahl(i+1)+" "+FUSSNOTEN[i]));
+  }
+  const status = el("p","betriebsstatus");
+  status.textContent = Store.modus()==="supabase"
+    ? "Ranking wird zentral geführt."
+    : "Ranking derzeit nur lokal geführt.";
+  fuss.appendChild(status);
+}
+const HOCH = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
+function hochzahl(n){ return String(n).split("").map(c=>HOCH[+c]).join(""); }
+
+/* ==========================================================================
+   9 — ABLAUF
+   ========================================================================== */
+function setzeAnsicht(bauer){
+  const ansicht = $("#ansicht");
+  ansicht.innerHTML = "";
+  bauer(ansicht);
+  zeichneFortschritt();
+  zeichneFuss();
+  window.scrollTo(0,0);
+}
+
+/* ---------- 0 — Datenschutzhinweis ---------- */
+const KEKSE = [
+  {t:"Notwendige Kekse", u:"Grundlage des Verfahrens"},
+  {t:"Kekse zur Reichweitenmessung", u:"Erfassung des Verzehrs"},
+  {t:"Streuselanteil", u:"Anteilig, nicht abwählbar"},
+  {t:"Kekse für Dritte (Ihre Sitznachbarn)", u:"Weitergabe erwünscht"}
+];
+
+function zeigeKekse(){
+  const box = el("div","kekse"); box.id="kekseraum";
+  const inner = el("div","kekse-inner");
+  inner.innerHTML =
+    "<div class='marke'>Jahn &amp; Kollegen</div>"+
+    "<div class='marke-unter'>Personalabteilung · Referat Gästeauswahl</div>"+
+    "<hr class='zier-doppel'>"+
+    "<h2>Hinweis zur Verarbeitung Ihrer Bewerberdaten</h2>"+
+    "<p>Diese Seite verwendet Kekse.</p>"+
+    "<p class='klein'>Die Verarbeitung erfolgt zum Zweck der Durchführung des Bewerbungsverfahrens 33/2026. "+
+    "Eine Weitergabe an Dritte findet statt, sofern Dritte danebensitzen.</p>";
+  const liste = el("div"); liste.id="kekseliste"; liste.style.display="none";
+  KEKSE.forEach(function(k){
+    const zeile = el("div","schalterzeile");
+    const links = el("div");
+    links.appendChild(el("p",null,k.t));
+    links.appendChild(el("small",null,k.u));
+    const sch = el("button","schalter"); sch.type="button"; sch.dataset.an="1";
+    sch.setAttribute("aria-label",k.t+" — technisch erforderlich");
+    sch.appendChild(el("i"));
+    sch.addEventListener("click",function(){
+      sch.dataset.an="0";
+      const notiz = $("#kekshinweis");
+      notiz.textContent = "Technisch erforderlich.";
+      notiz.style.visibility="visible";
+      setTimeout(function(){ sch.dataset.an="1"; }, leise()?10:260);
+    });
+    zeile.appendChild(links); zeile.appendChild(sch);
+    liste.appendChild(zeile);
+  });
+  const notiz = el("p","meldung fehler","Technisch erforderlich.");
+  notiz.id="kekshinweis"; notiz.style.visibility="hidden";
+  liste.appendChild(notiz);
+  inner.appendChild(liste);
+
+  const alle = el("button","knopf primaer","Alle akzeptieren"); alle.type="button";
+  const einst = el("button","knopf schmal","Einstellungen"); einst.type="button";
+  alle.addEventListener("click",function(){
+    box.remove();
+    zeigeAusschreibung();
+  });
+  einst.addEventListener("click",function(){
+    const offen = liste.style.display!=="none";
+    liste.style.display = offen ? "none":"block";
+    einst.textContent = offen ? "Einstellungen":"Einstellungen schließen";
+  });
+  inner.appendChild(alle); inner.appendChild(einst);
+  inner.appendChild(el("p","klein","Ohne Bestätigung ist eine Teilnahme am Verfahren nicht vorgesehen."));
+  box.appendChild(inner);
+  document.body.appendChild(box);
+  setTimeout(function(){ alle.focus({preventScroll:true}); },80);
+}
+
+/* ---------- 1 — Stellenausschreibung ---------- */
+const DATEN = [
+  ["Position","Gast (m/w/d)"],
+  ["Befristung","ein Abend, keine Verlängerung vorgesehen"],
+  ["Vergütung","keine"],
+  ["Einsatzort","Leipzig, Konstantinstraße 3"],
+  ["Arbeitszeit","in Abstimmung (§ 7 Abs. 1 BetrO)"],
+  ["Bewerbungsfrist","abgelaufen. Ihre Bewerbung wird dennoch geprüft."]
+];
+const PROFIL = [
+  "ausgeprägte Feierbereitschaft",
+  "sicherer Umgang mit Sitznachbarn",
+  "Bereitschaft zu Wochenendarbeit",
+  "Berufserfahrung von Vorteil, aber nicht Bedingung"
+];
+
+function zeigeAusschreibung(){
+  S.screen="ausschreibung";
+  seiteGeruest();
+  setzeAnsicht(function(a){
+    a.appendChild(el("div","marke","Jahn & Kollegen"));
+    a.appendChild(el("div","marke-unter","Personalabteilung · Referat Gästeauswahl"));
+    const h = el("h1","","Stellenausschreibung");
+    a.appendChild(h);
+    a.appendChild(el("div","betreff","Betreff: Besetzung der Position Gast (m/w/d)"));
+    a.appendChild(el("p",null,
+      "Sehr geehrte Bewerberin, sehr geehrter Bewerber, im Hause Jahn & Kollegen ist zum Tag der "+
+      "Veranstaltung eine Stelle als Gast (m/w/d) zu besetzen. Die Position ist auf einen Abend "+
+      "befristet und wird nicht vergütet. Vor einer Einstellung ist ein Eignungsverfahren in elf "+
+      "Modulen zu durchlaufen. Der Zeitaufwand beträgt nach Erfahrung der Personalabteilung etwa "+
+      "fünf Minuten."));
+
+    const dl = el("dl","datenblock");
+    DATEN.forEach(function(d){
+      const z = el("div","datenzeile");
+      z.appendChild(el("dt",null,d[0]));
+      z.appendChild(el("dd",null,d[1]));
+      dl.appendChild(z);
+    });
+    a.appendChild(dl);
+
+    a.appendChild(el("div","betreff","Anforderungsprofil"));
+    const ul = el("div","klein");
+    PROFIL.forEach(function(p){
+      ul.appendChild(el("p",null,"— "+p));
+    });
+    a.appendChild(ul);
+
+    const k = el("button","knopf primaer","Bewerbung beginnen"); k.type="button";
+    k.addEventListener("click",function(){ S.modulIndex=0; zeigeModul(); });
+    a.appendChild(k);
+    a.appendChild(el("p","klein","Mit dem Beginn der Bewerbung erkennen Sie die Betriebsordnung (BetrO) "+
+      "in der jeweils gültigen Fassung an. Die Fassung wird nicht bekannt gegeben."));
+  });
+}
+
+/* ---------- Modulgerüst ---------- */
+function zeigeModul(){
+  S.screen="modul";
+  const modul = MODULE[S.modulIndex];
+  if(!modul){ zeigeGremium(); return; }
+  setzeAnsicht(function(a){
+    a.appendChild(el("div","modulnr","Modul "+modul.nr+" · "+modul.titel));
+    a.appendChild(el("h2",null,modul.titel));
+    a.appendChild(el("div","frage",modul.frage));
+    if(modul.unterfrage) a.appendChild(el("p",null,modul.unterfrage));
+    if(modul.hinweis) a.appendChild(el("p","klein",modul.hinweis));
+    const feld = el("div"); feld.id="modulfeld";
+    a.appendChild(feld);
+    ARTEN[modul.art](modul, feld);
+  });
+}
+
+function meldungZeigen(wo, text, art){
+  let m = $(".meldung.laufend", wo);
+  if(!m){ m = el("div","meldung laufend"); wo.appendChild(m); }
+  m.className = "meldung laufend "+(art||"hinweis");
+  m.textContent = text;
+  return m;
+}
+
+function beanstandung(){ S.beanstandungen++; }
+
+/* Modul abschließen: Stempel, Nachlauf, nächstes Modul. */
+function modulFertig(modul, verzoegerung){
+  stempelHinzu(modul);
+  S.fussnotenStand = Math.min(FUSSNOTEN.length, 2 + modul.nr);
+  zeichneFuss();
+  const weiter = function(){
+    if(modul.protokollNachher) protokollZeigen();
+    const nach = NACHLAUF[modul.nachlauf];
+    if(nach){ nach(naechstesModul); } else { naechstesModul(); }
+  };
+  setTimeout(weiter, verzoegerung==null ? 1250 : verzoegerung);
+}
+function naechstesModul(){
+  S.modulIndex++;
+  if(S.modulIndex>=MODULE.length){ zeigeGremium(); return; }
+  zeigeModul();
+}
+
+/* ---------- Eingriffe der Testleitung ---------- */
+const NACHLAUF = {
+  zeitbeobachtung:function(fertig){
+    Modal.zeige({
+      absender:"Die Testleitung",
+      text:"Die Testleitung weist darauf hin, dass das weitere Verfahren unter Zeitbeobachtung steht (§ 4 Abs. 2 BetrO).",
+      zusatz:"Bearbeitungszeit: 5:00. Eine Überschreitung führt nicht zum Ausschluss.",
+      knopf:"Zur Kenntnis genommen",
+      danach:function(){ Timer.start(); fertig(); }
+    });
+  },
+  gutschrift:function(fertig){
+    Modal.zeige({
+      absender:"Die Testleitung",
+      text:"Zeitgutschrift wegen sympathischen Auftretens: +10 Sek.",
+      zusatz:"Die Gutschrift erfolgt einmalig und ist nicht übertragbar.",
+      knopf:"Dankend angenommen",
+      danach:function(){ Timer.korrigiere(10); fertig(); }
+    });
+  },
+  abzug:function(fertig){
+    Modal.zeige({
+      absender:"Die Testleitung",
+      text:"Abzug wegen übermäßiger Selbstsicherheit: −20 Sek.",
+      zusatz:"Gegen den Abzug ist ein Rechtsbehelf nicht vorgesehen.",
+      knopf:"Zur Kenntnis genommen",
+      danach:function(){ Timer.korrigiere(-20); fertig(); }
+    });
+  },
+  zwischenauswertung:function(fertig){
+    const feld = $("#modulfeld");
+    S.fortschrittOverride = 12;
+    zeichneFortschritt();
+    const m = el("div","meldung fehler","Zwischenauswertung erforderlich.");
+    feld.appendChild(m);
+    setTimeout(function(){
+      S.fortschrittOverride = 50;
+      zeichneFortschritt();
+      m.className="meldung hinweis";
+      m.textContent="Zwischenauswertung ergebnislos.";
+      setTimeout(function(){ S.fortschrittOverride=null; fertig(); }, 1300);
+    }, 3000);
+  }
+};
+
+/* ==========================================================================
+   10 — MODULARTEN
+   ========================================================================== */
+const ARTEN = {};
+
+/* --- Einfachauswahl --- */
+ARTEN.choice = function(modul, wo){
+  const liste = el("div");
+  wo.appendChild(liste);
+  const kuerzel = ["A","B","C","D","E"];
+  modul.optionen.forEach(function(text,i){
+    const b = el("button","wahl"); b.type="button";
+    b.appendChild(el("span","kuerzel",kuerzel[i]));
+    b.appendChild(el("span",null,text));
+    b.addEventListener("click",function(){
+      if(b.disabled) return;
+      if(i===modul.richtig){
+        $$(".wahl",liste).forEach(x=>{ x.disabled=true; });
+        b.classList.add("gewaehlt");
+        meldungZeigen(wo, modul.erfolg, "erfolg");
+        S.antworten["modul"+modul.nr]=text;
+        modulFertig(modul);
+      }else{
+        beanstandung();
+        b.classList.remove("gewaehlt");
+        meldungZeigen(wo, modul.fehler, "fehler");
+      }
+    });
+    liste.appendChild(b);
+  });
+};
+
+/* --- Schieberegler mit einmaliger „Korrektur“ --- */
+ARTEN.schieber = function(modul, wo){
+  let korrigiert=false;
+  const anzeige = el("div","frage"); anzeige.style.textAlign="center";
+  anzeige.style.fontSize="46px"; anzeige.style.margin="6px 0 2px";
+  const regler = document.createElement("input");
+  regler.type="range"; regler.min=modul.min; regler.max=modul.max; regler.step="1";
+  regler.value=modul.start;
+  regler.style.width="100%"; regler.style.minHeight="44px";
+  regler.setAttribute("aria-label","Lebensjahr");
+  const skala = el("div","klein");
+  skala.style.display="flex"; skala.style.justifyContent="space-between";
+  skala.appendChild(el("span",null,String(modul.min)));
+  skala.appendChild(el("span",null,String(modul.max)));
+
+  function male(){ anzeige.textContent = regler.value; }
+  male();
+  regler.addEventListener("input",male);
+  regler.addEventListener("change",function(){
+    if(!korrigiert){
+      korrigiert=true;
+      regler.value = modul.korrekturwert;
+      male();
+      beanstandung();
+      meldungZeigen(wo, modul.korrektur, "fehler");
+    }
+  });
+  wo.appendChild(anzeige);
+  wo.appendChild(regler);
+  wo.appendChild(skala);
+
+  const k = el("button","knopf primaer","Angabe übernehmen"); k.type="button";
+  k.addEventListener("click",function(){
+    const wert = parseInt(regler.value,10);
+    if(!korrigiert){
+      korrigiert=true;
+      regler.value=modul.korrekturwert; male();
+      beanstandung();
+      meldungZeigen(wo, modul.korrektur, "fehler");
+      return;
+    }
+    if(wert===modul.richtig){
+      regler.disabled=true; k.disabled=true; k.classList.add("gesperrt");
+      S.antworten["modul"+modul.nr]=wert;
+      meldungZeigen(wo, modul.erfolg, "erfolg");
+      modulFertig(modul);
+    }else{
+      beanstandung();
+      meldungZeigen(wo, modul.fehler, "fehler");
+    }
+  });
+  wo.appendChild(k);
+};
+
+/* --- Sicherheitsabfrage (Captcha) --- */
+ARTEN.captcha = function(modul, wo){
+  const kasten = el("div","captcha");
+  const kopf = el("div","captcha-kopf");
+  kopf.appendChild(el("b",null,"Bildprüfung"));
+  kopf.appendChild(document.createTextNode(modul.aufgabe));
+  kasten.appendChild(kopf);
+
+  const raster = el("div","raster");
+  const gewaehlt = new Array(9).fill(false);
+  for(let i=0;i<9;i++){
+    const kach = el("button","kachel"); kach.type="button";
+    kach.setAttribute("aria-pressed","false");
+    kach.setAttribute("aria-label","Feld "+(i+1)+" — Cola Zero");
+    const haken = el("span","haken");
+    const dose = el("span","dose");
+    dose.appendChild(el("span","deckel"));
+    dose.appendChild(el("span","null","ZERO"));
+    dose.style.transform = "rotate("+zufall(-4,4).toFixed(1)+"deg)";
+    kach.appendChild(haken); kach.appendChild(dose);
+    kach.addEventListener("click",function(){
+      gewaehlt[i]=!gewaehlt[i];
+      kach.setAttribute("aria-pressed", gewaehlt[i]?"true":"false");
+    });
+    raster.appendChild(kach);
+  }
+  kasten.appendChild(raster);
+
+  const fuss = el("div","captcha-fuss");
+  const att = el("div","attrappe","↻");
+  att.setAttribute("aria-hidden","true");
+  fuss.appendChild(att);
+  fuss.appendChild(el("span",null,"Prüfverfahren 33 · Bildsatz 7"));
+  kasten.appendChild(fuss);
+  wo.appendChild(kasten);
+
+  const k = el("button","knopf primaer","Prüfung abschließen"); k.type="button";
+  k.addEventListener("click",function(){
+    const anzahl = gewaehlt.filter(Boolean).length;
+    if(anzahl<9){
+      beanstandung();
+      meldungZeigen(wo, modul.fehler, "fehler");
+      return;
+    }
+    $$(".kachel",raster).forEach(x=>{ x.disabled=true; });
+    k.disabled=true; k.classList.add("gesperrt");
+    S.antworten["modul"+modul.nr]="mensch";
+    meldungZeigen(wo, modul.erfolg, "erfolg");
+    modulFertig(modul, 1700);
+  });
+  wo.appendChild(k);
+};
+
+/* --- Fliehendes Feld --- */
+ARTEN.flucht = function(modul, wo){
+  const rahmen = el("div","fluchtfeld");
+  wo.appendChild(rahmen);
+  const kuerzel=["A","B","C","D","E"];
+  let fluchten=0, gefangen=false;
+  let fluechtling=null;
+
+  modul.optionen.forEach(function(text,i){
+    const b = el("button","wahl"); b.type="button";
+    b.appendChild(el("span","kuerzel",kuerzel[i]));
+    b.appendChild(el("span",null,text));
+    if(i===modul.richtig){
+      fluechtling=b;
+      b.addEventListener("click",function(ev){
+        // Tastatur (detail===0) fängt sofort — Barrierefreiheit vor Gag.
+        if(gefangen) return;
+        if(ev.detail===0 || fluchten>=3){ fangen(); }
+      });
+      const start = function(ev){
+        if(gefangen) return;
+        if(fluchten<3){
+          if(ev.cancelable) ev.preventDefault();
+          fluchten++;
+          fliehe();
+        }
+      };
+      if(window.PointerEvent) b.addEventListener("pointerdown",start,{passive:false});
+      else { b.addEventListener("touchstart",start,{passive:false});
+             b.addEventListener("mousedown",start); }
+    }else{
+      b.addEventListener("click",function(){
+        if(gefangen) return;
+        beanstandung();
+        meldungZeigen(wo, modul.fehler, "fehler");
+      });
+    }
+    rahmen.appendChild(b);
+  });
+
+  function fliehe(){
+    if(!fluechtling.classList.contains("fliegt")){
+      const h = rahmen.offsetHeight;
+      rahmen.style.height = h+"px";
+      const versatz = fluechtling.offsetTop;
+      fluechtling.classList.add("fliegt");
+      fluechtling.style.left = "0px";
+      fluechtling.style.top  = versatz+"px";
+      // Erzwingt einen Layoutschritt, damit die erste Bewegung animiert.
+      void fluechtling.offsetWidth;
+    }
+    const maxX = Math.max(0, rahmen.clientWidth  - fluechtling.offsetWidth);
+    const maxY = Math.max(0, rahmen.clientHeight - fluechtling.offsetHeight);
+    fluechtling.style.left = Math.round(zufall(0,maxX))+"px";
+    fluechtling.style.top  = Math.round(zufall(0,maxY))+"px";
+    meldungZeigen(wo, "Das Feld wurde vorübergehend neu positioniert (§ 5 Abs. 2 BetrO).", "hinweis");
+  }
+  function fangen(){
+    gefangen=true;
+    $$(".wahl",rahmen).forEach(x=>{ x.disabled=true; });
+    fluechtling.classList.add("gewaehlt");
+    S.antworten["modul"+modul.nr]=modul.optionen[modul.richtig];
+    meldungZeigen(wo, modul.erfolg, "erfolg");
+    modulFertig(modul);
+  }
+};
+
+/* --- Freies Zahlenfeld --- */
+ARTEN.zahl = function(modul, wo){
+  let versuche=0;
+  const lab = el("label","feldname",modul.feldname); lab.setAttribute("for","zahlfeld");
+  const feld = document.createElement("input");
+  feld.type="number"; feld.id="zahlfeld"; feld.inputMode="numeric";
+  feld.placeholder="0"; feld.min="0";
+  wo.appendChild(lab); wo.appendChild(feld);
+  const k = el("button","knopf primaer","Betrag übermitteln"); k.type="button";
+  k.addEventListener("click",function(){
+    const roh = String(feld.value).replace(/[^0-9]/g,"");
+    if(!roh){ meldungZeigen(wo, modul.leer, "fehler"); return; }
+    const wert = parseInt(roh,10);
+    if(wert < modul.schwelle){
+      versuche++;
+      beanstandung();
+      if(versuche>=3){
+        meldungZeigen(wo, modul.fehler3, "fehler");
+        abschluss(wert, 1700);
+        return;
+      }
+      meldungZeigen(wo, modul.fehler, "fehler");
+      return;
+    }
+    meldungZeigen(wo, modul.erfolg, "erfolg");
+    abschluss(wert, 1400);
+  });
+  function abschluss(wert, wartezeit){
+    feld.disabled=true; k.disabled=true; k.classList.add("gesperrt");
+    S.antworten["modul"+modul.nr]=wert;
+    modulFertig(modul, wartezeit);
+  }
+  wo.appendChild(k);
+};
+
+/* --- Freitext mit Formvorschrift --- */
+ARTEN.text = function(modul, wo){
+  let formHinweis=false, versuche=0;
+  const lab = el("label","feldname",modul.feldname); lab.setAttribute("for","textfeld");
+  const feld = document.createElement("input");
+  feld.type="text"; feld.id="textfeld"; feld.autocomplete="off";
+  feld.setAttribute("autocapitalize","off"); feld.spellcheck=false;
+  feld.placeholder="—";
+  wo.appendChild(lab); wo.appendChild(feld);
+  const k = el("button","knopf primaer","Angabe übermitteln"); k.type="button";
+  k.addEventListener("click",function(){
+    const roh = String(feld.value).trim();
+    if(!roh){ meldungZeigen(wo, "Es wurde keine Angabe erfasst.", "fehler"); return; }
+    const klein = roh.toLowerCase();
+    if(klein!==modul.loesung){
+      versuche++;
+      beanstandung();
+      if(versuche>=3){
+        meldungZeigen(wo, "Angabe abweichend. Die Personalabteilung übernimmt sie gleichwohl.", "hinweis");
+        abschluss(roh.toUpperCase(), 1700);
+        return;
+      }
+      meldungZeigen(wo, modul.fehler, "fehler");
+      return;
+    }
+    if(!formHinweis){
+      formHinweis=true;
+      beanstandung();
+      meldungZeigen(wo, modul.formfehler, "fehler");
+      feld.value = "";
+      feld.focus({preventScroll:true});
+      return;
+    }
+    if(roh !== roh.toUpperCase()){
+      meldungZeigen(wo, modul.formfehler, "fehler");
+      return;
+    }
+    meldungZeigen(wo, modul.erfolg, "erfolg");
+    abschluss(roh, 1400);
+  });
+  function abschluss(wert, wartezeit){
+    feld.disabled=true; k.disabled=true; k.classList.add("gesperrt");
+    S.antworten["modul"+modul.nr]=wert;
+    modulFertig(modul, wartezeit);
+  }
+  wo.appendChild(k);
+};
+
+/* --- Zusatzvereinbarung mit versteckter Pflicht-Checkbox --- */
+ARTEN.vereinbarung = function(modul, wo){
+  let an=false;
+  const block = el("div","vertragstext");
+  modul.klauseln.forEach(function(text,i){
+    if(text==="PFLICHTFELD"){
+      const zeile = el("div","klausel pflicht");
+      zeile.appendChild(el("span","nr","§ "+(i+1)));
+      const feld = el("div","pflichtfeld"); feld.dataset.an="0";
+      feld.setAttribute("role","checkbox");
+      feld.setAttribute("aria-checked","false");
+      feld.tabIndex=0;
+      feld.appendChild(el("span","kaestchen"));
+      feld.appendChild(el("span",null,modul.pflicht));
+      const um = function(){
+        an=!an;
+        feld.dataset.an = an?"1":"0";
+        feld.setAttribute("aria-checked", an?"true":"false");
+        knopfStand();
+      };
+      feld.addEventListener("click",um);
+      feld.addEventListener("keydown",function(e){
+        if(e.key===" "||e.key==="Enter"){ e.preventDefault(); um(); }
+      });
+      zeile.appendChild(feld);
+      block.appendChild(zeile);
+    }else{
+      const zeile = el("div","klausel");
+      zeile.appendChild(el("span","nr","§ "+(i+1)));
+      zeile.appendChild(el("span",null,text));
+      block.appendChild(zeile);
+    }
+  });
+  wo.appendChild(block);
+
+  // Der Knopf bleibt technisch bedienbar (sonst käme die Meldung nie an),
+  // sieht aber gesperrt aus.
+  const k = el("button","knopf gesperrt","Vereinbarung annehmen"); k.type="button";
+  function knopfStand(){
+    k.className = "knopf " + (an?"primaer":"gesperrt");
+  }
+  k.addEventListener("click",function(){
+    if(!an){
+      meldungZeigen(wo, modul.fehler, "fehler");
+      return;
+    }
+    k.disabled=true; k.classList.add("gesperrt");
+    S.antworten["modul"+modul.nr]="angenommen";
+    meldungZeigen(wo, modul.erfolg, "erfolg");
+    modulFertig(modul);
+  });
+  wo.appendChild(k);
+};
+
+/* --- Aufwandsentschädigung --- */
+ARTEN.quittung = function(modul, wo){
+  const betrag = el("div","frage","0,00 €");
+  betrag.style.textAlign="center"; betrag.style.fontSize="44px"; betrag.style.margin="10px 0 4px";
+  wo.appendChild(betrag);
+  wo.appendChild(el("hr","zier"));
+
+  const bestaetigen = el("button","knopf primaer","Empfang bestätigen"); bestaetigen.type="button";
+  const ablehnen = el("button","knopf schmal","Ablehnen"); ablehnen.type="button";
+  wo.appendChild(bestaetigen); wo.appendChild(ablehnen);
+
+  ablehnen.addEventListener("click",function(){
+    beanstandung();
+    meldungZeigen(wo, modul.ablehnung, "fehler");
+    ablehnen.disabled=true; ablehnen.classList.add("gesperrt");
+  });
+  bestaetigen.addEventListener("click",function(){
+    bestaetigen.disabled=true; ablehnen.disabled=true;
+    bestaetigen.classList.add("gesperrt"); ablehnen.classList.add("gesperrt");
+    abwicklung();
+  });
+
+  function abwicklung(){
+    const balken = el("div","lade"); balken.appendChild(el("i"));
+    const zeile = el("div","ladezeile");
+    wo.appendChild(balken); wo.appendChild(zeile);
+    const i = balken.firstChild;
+    let stand=0, schritt=0;
+    zeile.textContent = modul.schritte[0];
+    const lauf = setInterval(function(){
+      stand += 7 + Math.random()*11;
+      if(stand>=99){
+        stand=99;
+        zeile.textContent = modul.schritte[2];
+        clearInterval(lauf);
+        setTimeout(function(){
+          i.style.width="100%";
+          S.antworten["modul"+modul.nr]="0,00 €";
+          meldungZeigen(wo, modul.erfolg, "erfolg");
+          modulFertig(modul, 1400);
+        }, 2200);
+      }else if(stand>45 && schritt===0){
+        schritt=1; zeile.textContent = modul.schritte[1];
+      }
+      i.style.width = Math.round(stand)+"%";
+    }, 260);
+  }
+};
+
+/* --- Postkorbübung --- */
+ARTEN.postkorb = function(modul, wo){
+  let reihe = modul.eintraege.slice();
+  const liste = el("div","postkorb");
+  wo.appendChild(liste);
+
+  function male(){
+    liste.innerHTML="";
+    reihe.forEach(function(e,i){
+      const z = el("div","postzeile");
+      z.appendChild(el("span","rang",String(i+1)+"."));
+      z.appendChild(el("span","text",e.text));
+      const pf = el("div","pfeile");
+      const hoch = el("button","pfeil","▲"); hoch.type="button";
+      hoch.setAttribute("aria-label",e.text+" nach oben");
+      const runter = el("button","pfeil","▼"); runter.type="button";
+      runter.setAttribute("aria-label",e.text+" nach unten");
+      hoch.disabled = (i===0); runter.disabled = (i===reihe.length-1);
+      hoch.addEventListener("click",function(){ tausch(i,i-1); });
+      runter.addEventListener("click",function(){ tausch(i,i+1); });
+      pf.appendChild(hoch); pf.appendChild(runter);
+      z.appendChild(pf);
+      liste.appendChild(z);
+    });
+  }
+  function tausch(a,b){
+    const t=reihe[a]; reihe[a]=reihe[b]; reihe[b]=t; male();
+  }
+  male();
+
+  const k = el("button","knopf primaer","Reihenfolge übermitteln"); k.type="button";
+  k.addEventListener("click",function(){
+    k.disabled=true; k.classList.add("gesperrt");
+    $$(".pfeil",liste).forEach(x=>{ x.disabled=true; });
+    S.antworten["modul"+modul.nr]=reihe.map(e=>e.id).join(" > ");
+    meldungZeigen(wo, modul.kommentare[reihe[0].id], "erfolg");
+    modulFertig(modul, 1900);
+  });
+  wo.appendChild(k);
+};
+
+/* --- Schichtpräferenz (ehrliche Abstimmung) --- */
+ARTEN.schicht = function(modul, wo){
+  let wahl=null;
+  const felder=[];
+  modul.optionen.forEach(function(o){
+    const b = el("button","schichtfeld"); b.type="button";
+    b.setAttribute("aria-pressed","false");
+    b.appendChild(el("span","titel",o.titel));
+    b.appendChild(el("span","unter",o.unter));
+    b.addEventListener("click",function(){
+      wahl=o.id;
+      felder.forEach(function(f){
+        const aktiv = f===b;
+        f.classList.toggle("gewaehlt",aktiv);
+        f.setAttribute("aria-pressed",aktiv?"true":"false");
+      });
+      k.className="knopf primaer";
+    });
+    felder.push(b);
+    wo.appendChild(b);
+  });
+
+  const k = el("button","knopf gesperrt","Präferenz abgeben"); k.type="button";
+  wo.appendChild(k);
+
+  k.addEventListener("click",function(){
+    if(!wahl){
+      meldungZeigen(wo, "Bitte wählen Sie eine Schicht. Eine Enthaltung ist nicht vorgesehen.", "fehler");
+      return;
+    }
+    felder.forEach(f=>{ f.disabled=true; });
+    k.disabled=true; k.classList.add("gesperrt"); k.style.display="none";
+    meldungZeigen(wo, modul.protokolltext, "erfolg");
+
+    const lab = el("label","feldname",modul.feldname); lab.setAttribute("for","begruendung");
+    const feld = document.createElement("input");
+    feld.type="text"; feld.id="begruendung"; feld.autocomplete="off";
+    feld.placeholder="—";
+    wo.appendChild(lab); wo.appendChild(feld);
+
+    const ab = el("button","knopf primaer","Anhörung abschließen"); ab.type="button";
+    ab.addEventListener("click",function(){
+      ab.disabled=true; ab.classList.add("gesperrt"); feld.disabled=true;
+      S.schicht = {choice:wahl, comment:String(feld.value||"").slice(0,240)};
+      S.antworten["modul"+modul.nr]= wahl;
+      stimmeAbgeben(S.schicht);
+      meldungZeigen(wo, modul.erfolg, "erfolg");
+      modulFertig(modul, 1400);
+    });
+    wo.appendChild(ab);
+  });
+};
+
+/* Eine Stimme je Gerät — damit die Auszählung belastbar bleibt. */
+function stimmeAbgeben(stimme){
+  let schon=null;
+  try{ schon = localStorage.getItem(LS.gewaehlt); }catch(e){}
+  if(schon) return;
+  Store.addVote(stimme);
+  try{ localStorage.setItem(LS.gewaehlt, stimme.choice); }catch(e){}
+}
+
+/* ==========================================================================
+   11 — GREMIUM, NAME, VERTRAG
+   ========================================================================== */
+const GREMIUM = [
+  "Gleiche Angaben mit Bewerberdatenbank ab",
+  "Prüfe Sitzordnungsverträglichkeit",
+  "Hole Zweitmeinung aus Modul 4 ein",
+  "Beobachter 2 wird überstimmt",
+  "Erstelle Personalnummer"
+];
+
+function zeigeGremium(){
+  S.screen="gremium";
+  Timer.stopp();
+  S.eigeneZeit = Timer.verbraucht();
+  setzeAnsicht(function(a){
+    a.appendChild(el("div","modulnr","Verfahrensabschluss"));
+    a.appendChild(el("h2",null,"Das Gremium tagt"));
+    a.appendChild(el("p",null,"Ihre Angaben werden abschließend bewertet. Bitte schließen Sie diese Seite nicht."));
+    const balken = el("div","lade"); balken.appendChild(el("i"));
+    const zeile = el("div","ladezeile");
+    a.appendChild(balken); a.appendChild(zeile);
+    const i = balken.firstChild;
+    let n=0;
+    zeile.textContent = GREMIUM[0];
+    i.style.width="8%";
+    const lauf = setInterval(function(){
+      n++;
+      if(n>=GREMIUM.length){
+        clearInterval(lauf);
+        i.style.width="100%";
+        setTimeout(zeigeNamensabfrage, 700);
+        return;
+      }
+      zeile.textContent = GREMIUM[n];
+      i.style.width = Math.round((n+1)/GREMIUM.length*100)+"%";
+    }, 800);
+  });
+}
+
+function zeigeNamensabfrage(){
+  S.screen="name";
+  setzeAnsicht(function(a){
+    a.appendChild(el("div","modulnr","Personalakte"));
+    a.appendChild(el("h2",null,"Namensangabe"));
+    a.appendChild(el("div","frage","Bitte geben Sie Ihren Namen für die Personalakte an."));
+    a.appendChild(el("p","klein","Die Angabe erscheint in der Eignungsrangliste. Eine spätere Änderung ist nicht vorgesehen."));
+    const lab = el("label","feldname","Name"); lab.setAttribute("for","namensfeld");
+    const feld = document.createElement("input");
+    feld.type="text"; feld.id="namensfeld"; feld.autocomplete="name"; feld.maxLength=32;
+    try{ feld.value = localStorage.getItem(LS.eigenerName)||""; }catch(e){}
+    a.appendChild(lab); a.appendChild(feld);
+    const k = el("button","knopf primaer","Personalakte anlegen"); k.type="button";
+    k.addEventListener("click",function(){
+      const name = String(feld.value||"").trim().slice(0,32);
+      if(!name){
+        meldungZeigen(a, "Ohne Namen kann keine Personalakte geführt werden.", "fehler");
+        return;
+      }
+      k.disabled=true; k.classList.add("gesperrt"); feld.disabled=true;
+      S.name = name;
+      try{ localStorage.setItem(LS.eigenerName, name); }catch(e){}
+      S.personalnummer = personalnummer(name);
+      Store.addScore({name:name, seconds:S.eigeneZeit, penalties:S.beanstandungen})
+        .then(function(id){
+          S.eigeneId = id;
+          try{ if(id) localStorage.setItem(LS.eigeneId, String(id)); }catch(e){}
+        })
+        .catch(function(){})
+        .then(function(){ zeigeVertrag(); });
+    });
+    a.appendChild(k);
+  });
+}
+
+function personalnummer(name){
+  let h=0;
+  for(let i=0;i<name.length;i++) h=(h*31 + name.charCodeAt(i))>>>0;
+  return "P-33-"+String(1000 + (h%9000));
+}
+
+function zeigeVertrag(){
+  S.screen="vertrag";
+  setzeAnsicht(function(a){
+    a.appendChild(el("div","modulnr","Einstellungszusage"));
+    const urk = el("div","urkunde");
+    const innen = el("div","urkunde-innen");
+    innen.innerHTML =
+      "<h2>Arbeitsvertrag</h2>"+
+      "<div class='unterzeile'>Jahn &amp; Kollegen · Verfahren 33/2026</div>";
+    const p = el("p",null,
+      "Hiermit wird "+S.name+" mitgeteilt, dass die Bewerbung auf die Position Gast (m/w/d) "+
+      "erfolgreich war. Die Einstellung erfolgt zum Tag der Veranstaltung. Das Eignungsverfahren "+
+      "wurde in allen elf Modulen bestanden.");
+    innen.appendChild(p);
+
+    const dl = el("dl","datenblock");
+    [["Personalnummer",S.personalnummer],
+     ["Position","Gast (m/w/d)"],
+     ["Einsatzort","Leipzig, Konstantinstraße 3"],
+     ["Arbeitszeit","wird nach Auswertung der Schichtpräferenzen gesondert bekanntgegeben"],
+     ["Bearbeitungszeit",zeitText(S.eigeneZeit).replace("−","")+" Min."],
+     ["Beanstandungen",String(S.beanstandungen)],
+     ["Vergütung","keine"]
+    ].forEach(function(d){
+      const z = el("div","datenzeile");
+      z.appendChild(el("dt",null,d[0]));
+      z.appendChild(el("dd",null,d[1]));
+      dl.appendChild(z);
+    });
+    innen.appendChild(dl);
+
+    const code = el("div","code-block");
+    code.appendChild(el("div","oben","Zugangscode zum Betriebsgelände"));
+    code.appendChild(el("div","code","Juliistcool"));
+    const fussn = el("div","fuss");
+    fussn.appendChild(document.createTextNode("Vorzulegen auf Verlangen. Zugleich Ihr Nachweis der bestandenen Eignungsprüfung."));
+    fussn.appendChild(el("br"));
+    fussn.appendChild(document.createTextNode("¹ Der Code öffnet im Übrigen auch das drahtlose Netzwerk vor Ort."));
+    code.appendChild(fussn);
+    innen.appendChild(code);
+
+    const stempelfeld = el("div","stempel-ablage"); stempelfeld.id="vertragsstempel";
+    innen.appendChild(stempelfeld);
+
+    const unter = el("div","unterschriften");
+    const links = el("div","unterschrift");
+    links.appendChild(el("div","leer"));
+    links.appendChild(document.createTextNode(S.name));
+    const rechts = el("div","unterschrift");
+    rechts.appendChild(el("div","gez","gez. Geschäftsführung"));
+    rechts.appendChild(document.createTextNode("Jahn & Kollegen"));
+    unter.appendChild(links); unter.appendChild(rechts);
+    innen.appendChild(unter);
+
+    urk.appendChild(innen);
+    a.appendChild(urk);
+
+    const k = el("button","knopf primaer","Eignungsrangliste einsehen"); k.type="button";
+    k.addEventListener("click",zeigeRangliste);
+    a.appendChild(k);
+    a.appendChild(el("p","klein","Der Vertrag gilt mit Erscheinen als angenommen. "+
+      "Eine Ausfertigung verbleibt bei der Personalabteilung, eine bei Ihnen, eine bei Beobachter 3."));
+
+    // Stempel des Laufs auf dem Vertrag versammeln.
+    S.stempel.forEach(function(st){
+      const n = el("div","stempel");
+      n.style.transform="rotate("+st.rot+"deg)";
+      n.appendChild(el("b",null,st.zeile1));
+      n.appendChild(document.createTextNode(st.zeile2));
+      stempelfeld.appendChild(n);
+    });
+    const ablage = $("#stempelablage");
+    if(ablage) ablage.innerHTML="";
+  });
+  S.fussnotenStand = FUSSNOTEN.length;
+  zeichneFuss();
+}
+
+/* ==========================================================================
+   12 — RANGLISTE
+   ========================================================================== */
+let ranglisteHoerer = false;
+let letzteIds = null;
+
+function zeigeRangliste(){
+  S.screen="rangliste";
+  setzeAnsicht(function(a){
+    a.appendChild(el("div","modulnr","Aushang"));
+    a.appendChild(el("h2",null,"Eignungsrangliste der geprüften Bewerber"));
+
+    const live = el("div","live"); live.id="liveanzeige";
+    live.appendChild(el("span","punkt"));
+    live.appendChild(el("span","text",""));
+    a.appendChild(live);
+
+    const akt = el("div","aktualisierung"); akt.id="aktualisierung";
+    a.appendChild(akt);
+
+    const halter = el("div"); halter.id="tabellenhalter";
+    a.appendChild(halter);
+
+    const balken = el("div","balkenblock"); balken.id="balkenblock";
+    a.appendChild(balken);
+
+    const k = el("button","knopf schmal","Erneut bewerben"); k.type="button";
+    k.addEventListener("click",erneutBewerben);
+    a.appendChild(k);
+    a.appendChild(el("p","klein","Es wird ausschließlich der beste Lauf je Bewerber geführt. "+
+      "Ein Anspruch auf einen vorderen Rang besteht nicht."));
+
+    zeichneRangliste(0);
+  });
+  if(!ranglisteHoerer){
+    ranglisteHoerer = true;
+    Store.on(function(daten, neu){
+      if(S.screen==="rangliste") zeichneRangliste(neu);
+      if(S.screen==="aushang") zeichneAushang(neu);
+    });
+  }
+  Store.aktualisieren();
+}
+
+function zeichneRangliste(neu){
+  const halter = $("#tabellenhalter");
+  if(!halter) return;
+  const daten = Store.daten();
+  const liste = rangliste(daten.scores);
+  const neueIds = liste.map(z=>String(z.id));
+
+  const tab = el("table","tabelle");
+  const kopf = el("thead");
+  const kz = el("tr");
+  ["Rang","Bewerber","Zeit","Bean."].forEach(function(t,i){
+    const th = el("th",null,t);
+    if(i===2) th.style.textAlign="right";
+    if(i===3) th.style.textAlign="right";
+    kz.appendChild(th);
+  });
+  kopf.appendChild(kz); tab.appendChild(kopf);
+  const koerper = el("tbody");
+
+  let eigeneId=null;
+  try{ eigeneId = S.eigeneId || localStorage.getItem(LS.eigeneId); }catch(e){}
+  let eigenerName=""; try{ eigenerName = (S.name || localStorage.getItem(LS.eigenerName) || "").toLowerCase(); }catch(e){}
+
+  if(!liste.length){
+    const z = el("tr"); const td = el("td",null,"Noch keine geprüften Bewerber erfasst.");
+    td.colSpan=4; td.className="klein"; z.appendChild(td); koerper.appendChild(z);
+  }
+  liste.forEach(function(e,i){
+    const z = el("tr");
+    const selbst = (eigeneId && String(e.id)===String(eigeneId)) ||
+                   (!eigeneId && eigenerName && String(e.name||"").toLowerCase()===eigenerName);
+    if(selbst) z.className="selbst";
+    if(letzteIds && neueIds.length && letzteIds.indexOf(String(e.id))===-1) z.classList.add("neu");
+    const r = el("td","r-rang",String(i+1)+"."); z.appendChild(r);
+    z.appendChild(el("td","r-name",e.name||"—"));
+    z.appendChild(el("td","r-zeit",zeitText(Number(e.seconds)||0)));
+    z.appendChild(el("td","r-bean",String(Number(e.penalties)||0)));
+    koerper.appendChild(z);
+  });
+  tab.appendChild(koerper);
+  halter.innerHTML=""; halter.appendChild(tab);
+  letzteIds = neueIds;
+
+  // Statuszeile
+  const akt = $("#aktualisierung");
+  if(akt){
+    akt.textContent = "Letzte Aktualisierung: "+uhrzeit()+
+      (neu>0 ? " · "+neu+(neu===1?" neue Bewerbung erfasst.":" neue Bewerbungen erfasst.") : " · Bestand unverändert.");
+  }
+  const live = $("#liveanzeige");
+  if(live){
+    const modus = Store.modus(), verb = Store.verbindung();
+    const punkt = $(".punkt",live), txt = $(".text",live);
+    if(modus==="supabase"){
+      punkt.classList.remove("aus");
+      txt.textContent = verb==="realtime"
+        ? "Verbindung zur Personaldatenbank: aktiv"
+        : "Verbindung zur Personaldatenbank: aktiv (Abfragebetrieb)";
+    }else{
+      punkt.classList.add("aus");
+      txt.textContent = "Datenbank: lokal geführt";
+    }
+  }
+  zeichneBalken($("#balkenblock"), Store.daten().votes);
+}
+
+function zeichneBalken(wo, votes){
+  if(!wo) return;
+  const st = stimmenStand(votes);
+  wo.innerHTML="";
+  wo.appendChild(el("div","betreff","Zwischenstand der Anhörung zur Arbeitszeit — Auszählung: laufend"));
+  [["Frühschicht",st.frueh,st.pFrueh],["Spätschicht",st.spaet,st.pSpaet]].forEach(function(b){
+    const zeile = el("div","balkenzeile");
+    const kopf = el("div","balkenkopf");
+    kopf.appendChild(el("span",null,b[0]));
+    kopf.appendChild(el("span","wert",b[1]+(b[1]===1?" Stimme · ":" Stimmen · ")+b[2]+" %"));
+    zeile.appendChild(kopf);
+    const bal = el("div","balken"); const i = el("i");
+    bal.appendChild(i); zeile.appendChild(bal);
+    wo.appendChild(zeile);
+    requestAnimationFrame(function(){ i.style.width = b[2]+"%"; });
+  });
+  wo.appendChild(el("p","klein","Stimmen gesamt: "+st.gesamt+
+    ". Die Auszählung erfolgt fortlaufend und ohne Gewähr (§ 7 Abs. 3 BetrO)."));
+}
+
+function erneutBewerben(){
+  S.modulIndex=0;
+  S.beanstandungen=0;
+  S.stempel=[];
+  S.restzeit=300;
+  S.ueberschritten=false;
+  S.timerSichtbar=false;
+  S.antworten={};
+  S.protokollIndex=0;
+  S.fussnotenStand=2;
+  S.fortschrittOverride=null;
+  Timer.stopp();
+  seiteGeruest();
+  zeigeModul();
+}
+
+/* ==========================================================================
+   13 — AUSHANG-ANSICHT
+   ========================================================================== */
+function istAushang(){
+  const p = new URLSearchParams(location.search);
+  return (p.get("ansicht")==="aushang") || location.hash==="#aushang";
+}
+
+function zeigeAushang(){
+  S.screen="aushang";
+  document.getElementById("protokoll").remove();
+  const wurzel = $("#wurzel");
+  wurzel.innerHTML="";
+  const box = el("div","aushang");
+  box.innerHTML =
+    "<div class='aushang-kopf'>"+
+      "<h1>Jahn &amp; Kollegen</h1>"+
+      "<div class='meta'>Aushang am Schwarzen Brett gemäß § 9 BetrO<br>Verfahren 33/2026 · <span id='aushangzeit'></span></div>"+
+    "</div>"+
+    "<div class='aushang-titel'>Eignungsrangliste der geprüften Bewerber</div>"+
+    "<div id='aushangtabelle'></div>"+
+    "<div class='aushang-fuss'>"+
+      "<div class='stand' id='aushangstand'></div>"+
+      "<div class='ort'>Konstantinstraße 3, Leipzig</div>"+
+    "</div>";
+  wurzel.appendChild(box);
+
+  Store.on(function(daten,neu){ zeichneAushang(neu); });
+  zeichneAushang(0);
+  setInterval(function(){ zeichneAushang(0); }, 20000);
+  wachHalten();
+}
+
+function zeichneAushang(neu){
+  const halter = $("#aushangtabelle");
+  if(!halter) return;
+  const daten = Store.daten();
+  const liste = rangliste(daten.scores).slice(0,12);
+  const neueIds = liste.map(z=>String(z.id));
+
+  if(!liste.length){
+    halter.innerHTML = "<div class='aushang-leer'>Noch keine geprüften Bewerber erfasst. "+
+      "Das Verfahren läuft.</div>";
+  }else{
+    const tab = el("table","aushang-tab");
+    const kopf = el("thead"); const kz = el("tr");
+    ["Rang","Bewerber","Bearbeitungszeit","Beanstandungen"].forEach(function(t,i){
+      const th = el("th",null,t);
+      if(i>1) th.style.textAlign="right";
+      kz.appendChild(th);
+    });
+    kopf.appendChild(kz); tab.appendChild(kopf);
+    const koerper = el("tbody");
+    liste.forEach(function(e,i){
+      const z = el("tr");
+      if(letzteIds && letzteIds.indexOf(String(e.id))===-1) z.classList.add("neu");
+      z.appendChild(el("td","r",String(i+1)+"."));
+      z.appendChild(el("td",null,e.name||"—"));
+      const t1 = el("td","z",zeitText(Number(e.seconds)||0)); t1.style.textAlign="right";
+      const t2 = el("td","z",String(Number(e.penalties)||0)); t2.style.textAlign="right";
+      z.appendChild(t1); z.appendChild(t2);
+      koerper.appendChild(z);
+    });
+    tab.appendChild(koerper);
+    halter.innerHTML=""; halter.appendChild(tab);
+  }
+  letzteIds = neueIds;
+
+  const st = stimmenStand(daten.votes);
+  const stand = $("#aushangstand");
+  if(stand){
+    stand.innerHTML =
+      "<span>Arbeitszeit — Auszählung läuft</span>"+
+      "<span>Frühschicht "+st.frueh+" ("+st.pFrueh+" %)</span>"+
+      "<span>Spätschicht "+st.spaet+" ("+st.pSpaet+" %)</span>"+
+      "<span>"+(Store.modus()==="supabase"?"Datenbank: verbunden":"Datenbank: lokal")+"</span>";
+  }
+  const zeit = $("#aushangzeit");
+  if(zeit) zeit.textContent = "Stand "+uhrzeit();
+}
+
+function wachHalten(){
+  if(!("wakeLock" in navigator)) return;
+  let sperre=null;
+  const holen = function(){
+    navigator.wakeLock.request("screen").then(function(s){
+      sperre=s;
+      s.addEventListener("release",function(){ sperre=null; });
+    }).catch(function(){});
+  };
+  holen();
+  document.addEventListener("visibilitychange",function(){
+    if(document.visibilityState==="visible" && !sperre) holen();
+  });
+}
+
+/* ==========================================================================
+   14 — START
+   ========================================================================== */
+Store.start().then(function(){
+  if(istAushang()){ zeigeAushang(); return; }
+  seiteGeruest();
+  zeigeKekse();
+}).catch(function(){
+  if(istAushang()){ zeigeAushang(); return; }
+  seiteGeruest();
+  zeigeKekse();
+});
+</script>
+</body>
+</html>
